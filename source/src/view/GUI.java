@@ -25,6 +25,7 @@ public class GUI extends JFrame {
     public void showMenu() {
         add(this.menu);
         remove(this.diapo);
+        pack();
     }
 
     /**
@@ -36,5 +37,6 @@ public class GUI extends JFrame {
         this.diapo=new Diapositive(nbSlide,title);
         add(this.diapo);
         remove(this.menu);
+        pack();
     }
 }
