@@ -2,7 +2,9 @@ package view;
 
 import control.MenuListener;
 
-public class Menu {
+import javax.swing.*;
+
+public class Menu extends JPanel {
   public Menu() {
 
   }

@@ -1,36 +1,39 @@
 package view;
 
+import javax.swing.*;
+
 public class GUI extends JFrame {
 
-  private Diapositive diapo;
-  private Menu menu;
+    private Diapositive diapo;
+    private Menu menu;
 
-  public GUI() {
-    super("Titre ?");
-    
-    this.diapo = new Diapositive();
-    this.menu = new Menu();
+    public GUI() {
+        super("Titre ?");
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        this.diapo = new Diapositive();
+        this.menu = new Menu();
 
-    pack();
-    setVisible(true);
-  }
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-/**
- * Allow to show the menu
- */
-  public void showMenu() {
-    add(this.menu);
-    remove(this.diapo);
-  }
+        pack();
+        setVisible(true);
+    }
 
-/**
- * Allow to show the diapo
- * @param nbSlide The slide number you want to show
- */
-  public void showDiapo(int numSlide) {
-    add(this.diapo);
-    remove(this.menu);
-  }
+    /**
+     * Allow to show the menu
+     */
+    public void showMenu() {
+        add(this.menu);
+        remove(this.diapo);
+    }
+
+    /**
+     * Allow to show the diapo
+     *
+     * @param nbSlide The slide number you want to show
+     */
+    public void showDiapo(int numSlide) {
+        add(this.diapo);
+        remove(this.menu);
+    }
 }
