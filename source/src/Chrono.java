@@ -1,3 +1,5 @@
 public class Chrono {
-  // coucou les amis
+  public Chrono() {
+    
+  }
 }
