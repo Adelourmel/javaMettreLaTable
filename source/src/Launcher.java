@@ -3,6 +3,7 @@ public class Launcher {
     Menu menu = new Menu();
     menu.add("pomme");
     //ok
+    //Non
     // bonjour
   }
 }
