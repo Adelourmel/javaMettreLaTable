@@ -1,8 +1,8 @@
 package view;
 
-import control.DiapositiveListener extends JPanel;
+import control.DiapositiveListener;
 
-public class Diapositive {
+public class Diapositive extends JPanel{
     public Diapositive() {
 
     }
