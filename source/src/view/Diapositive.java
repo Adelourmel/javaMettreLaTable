@@ -12,7 +12,7 @@ public class Diapositive extends JPanel {
 
     private JPanel header;
     private JPanel footer;
-    private JPanel content;
+    private JLabel image;
 
     private JButton suivant;
     private JButton precedant;
@@ -32,9 +32,9 @@ public class Diapositive extends JPanel {
     }
 
     public void makePanel(){
-        this.footer = new JPanel(new GridLayout(1,2));
-        this.content = new JPanel();
-        this.header = new JPanel(new GridLayout(1,3));
+        this.footer = new JPanel();
+        this.image = new JLabel("?/img/");
+        this.header = new JPanel();
 
         this.exit = new JButton("exit");
         this.precedant = new JButton("précédent");
@@ -44,9 +44,9 @@ public class Diapositive extends JPanel {
         this.footer.add(suivant);
         this.footer.add(precedant);
 
-        add(this.header,BorderLayout.NORTH);
-        add(this.content,BorderLayout.CENTER);
-        add(this.footer,BorderLayout.SOUTH);
+        add(this.header);
+        add(this.image);
+        add(this.footer);
     }
 
 }
