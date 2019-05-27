@@ -32,7 +32,8 @@ public class GUI extends JFrame {
      *
      * @param nbSlide The slide number you want to show
      */
-    public void showDiapo(int numSlide) {
+    public void showDiapo(int nbSlide,String title) {
+        this.diapo=new Diapositive(nbSlide,title);
         add(this.diapo);
         remove(this.menu);
     }
