@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class GUI extends JFrame {
 
@@ -9,6 +10,7 @@ public class GUI extends JFrame {
 
     public GUI() {
         super("Titre ?");
+        setLayout(new BorderLayout());
 
         this.diapo = new Diapositive();
         this.menu = new Menu();

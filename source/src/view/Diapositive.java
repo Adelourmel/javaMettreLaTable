@@ -1,11 +1,12 @@
 package view;
 
 import control.DiapositiveListener;
+import javafx.scene.layout.BorderPane;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Diapositive extends JPanel {
+public class Diapositive extends Panel {
     private int index;
     private int nbSlide;
     private String file;
@@ -20,6 +21,7 @@ public class Diapositive extends JPanel {
 
     public Diapositive() {
         super();
+        setLayout(new BorderLayout());
         makePanel();
     }
 
@@ -44,9 +46,9 @@ public class Diapositive extends JPanel {
         this.footer.add(suivant);
         this.footer.add(precedant);
 
-        add(this.header);
-        add(this.image);
-        add(this.footer);
+        add(this.header,BorderLayout.SOUTH);
+        add(this.image,BorderLayout.CENTER);
+        add(this.footer,BorderLayout.NORTH);
     }
 
 }
