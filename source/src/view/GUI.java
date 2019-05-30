@@ -1,6 +1,7 @@
 package view;
 
 import control.GUIListener;
+import model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,7 +46,6 @@ public class GUI extends JFrame {
         add(this.menu);
         this.footer.setVisible(false);
         repaint();
-        pack();
     }
 
     /**
@@ -59,29 +59,30 @@ public class GUI extends JFrame {
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
-        this.precedent.setEnabled(false);
+        this.precedentSetState(false);
         repaint();
-        pack();
     }
 
     /**
      * Initialise header with Title
-     * @param string Window title
+     * @param stitle Window title
      */
     public void setHeader(String title){
         this.setTitle(title);
         this.header = new JPanel();
         if(title.equals("Menu")){
-            this.exit.setText("close");
+            ImageIcon icon= new ImageIcon(System.getProperty("user.dir")+"/source/ButtonIcone/close.png");
+            this.exit.setIcon(icon);
         } else {
-            this.exit.setText("exit");
+            ImageIcon icon= new ImageIcon(System.getProperty("user.dir")+"/source/ButtonIcone/return.png");
+            this.exit.setIcon(icon);
         }
-        this.title.setText(title);
+        this.title.setText("<html><font color = white >"+title+"</font></html>");
         repaint();
     }
 
     public void setFooter() {
-        this.footer = new JPanel();
+        this.footer = new JPanel(new GridLayout(1,2));
         this.suivant = new JButton("Suivant");
         this.precedent = new JButton("Précédent");
         this.footer.add(this.precedent);
@@ -91,8 +92,14 @@ public class GUI extends JFrame {
 
     public void setHeader() {
         this.header = new JPanel(new BorderLayout());
-        this.exit = new JButton(" ");
-        this.title = new JLabel(" ");
+        this.header.setBackground(new Color(104,159,56));
+        this.exit = new JButton();
+        this.exit.setPreferredSize(new Dimension(50,50));
+        this.exit.setBackground(null);
+        this.exit.setBorderPainted(false);
+        this.exit.setFocusPainted(false);
+        this.exit.setContentAreaFilled(false);
+        this.title = new JLabel();
         this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
         this.header.add(this.exit,BorderLayout.WEST);
@@ -104,7 +111,11 @@ public class GUI extends JFrame {
         this.precedent.setEnabled(state);
     }
 
-    public void getChrono() {
+    public String getTitle() {
+        return title.getText();
+    }
+
+    public Chrono getChrono() {
       return this.chrono;
     }
 }
