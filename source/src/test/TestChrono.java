@@ -6,13 +6,10 @@ public class TestChrono {
   public static void main(String[] args) {
 
     System.out.println("TESt chrono");
-    Chrono test = new Chrono("../data/test.bin");
+    Chrono test = new Chrono("../data/score.bin");
     test.start();
-    long i = -1000000000;
-    while (i < 1000000000) {
-      System.out.println("yop");
-      i++;
-    }
+    long i = 0;
+
 
     int tmp = test.stop();
 

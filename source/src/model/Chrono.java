@@ -76,7 +76,7 @@ public class Chrono {
 
   public String beautify(int time) {
 
-    return new SimpleDateFormat("mm:ss:SSS").format(new Date(time));
+    return new SimpleDateFormat("mm:ss").format(new Date(time));
   }
 
   public int getFinalTime() {
