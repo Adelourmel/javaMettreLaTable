@@ -14,8 +14,8 @@ public class GUIListener implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        if(this.gui.getTitle().equals("Menu")){
-
+        if(this.gui.getTitle().contains("Menu")){
+            this.gui.dispose();
         } else {
             this.gui.showMenu();
         }
