@@ -1,6 +1,7 @@
 package view;
 
 import control.GUIListener;
+import model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,7 +46,6 @@ public class GUI extends JFrame {
         add(this.menu);
         this.footer.setVisible(false);
         repaint();
-        pack();
     }
 
     /**
@@ -61,7 +61,6 @@ public class GUI extends JFrame {
         this.footer.setVisible(true);
         this.precedentSetState(false);
         repaint();
-        pack();
     }
 
     /**
@@ -116,7 +115,7 @@ public class GUI extends JFrame {
         return title.getText();
     }
 
-    public void getChrono() {
+    public Chrono getChrono() {
       return this.chrono;
     }
 }
