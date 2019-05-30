@@ -63,7 +63,7 @@ public class GUI extends JFrame {
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
-        //this.precedent.setEnabled(false);
+        this.precedent.setEnabled(false);
         repaint();
     }
 
