@@ -1,5 +1,7 @@
 package view;
 
+import control.GUIListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,20 +9,26 @@ public class GUI extends JFrame {
 
     private Diapositive diapo;
     private Menu menu;
+
     private JPanel header;
     private JButton exit;
+    private JLabel title;
+
+    private JPanel footer;
+    private JButton suivant;
+    private JButton precedent;
 
     public GUI() {
+        //GUI
         super("Titre ?");
 
         this.diapo = new Diapositive();
         this.menu = new Menu();
 
-        setHeader("Menu");
-        add(this.header,BorderLayout.NORTH);
-
+        this.setHeader();
+        this.setFooter();
+        // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         pack();
         setVisible(true);
     }
@@ -30,8 +38,9 @@ public class GUI extends JFrame {
      */
     public void showMenu() {
         setHeader("Menu");
-        add(this.menu);
         remove(this.diapo);
+        add(this.menu);
+        this.footer.setVisible(false);
         repaint();
         pack();
     }
@@ -46,6 +55,8 @@ public class GUI extends JFrame {
         this.diapo=new Diapositive(nbSlide,title);
         add(this.diapo);
         remove(this.menu);
+        this.footer.setVisible(true);
+        this.precedent.setEnabled(false);
         repaint();
         pack();
     }
@@ -57,11 +68,34 @@ public class GUI extends JFrame {
     public void setHeader(String title){
         this.header = new JPanel();
         if(title.equals("Menu")){
-            this.exit = new JButton("close");
+            this.exit.setText("close");
         } else {
-            this.exit = new JButton("exit");
+            this.exit.setText("exit");
         }
+        this.title.setText(title);
+        repaint();
+    }
+
+    public void setFooter() {
+        this.footer = new JPanel();
+        this.suivant = new JButton("Suivant");
+        this.precedent = new JButton("Précédent");
+        this.footer.add(this.precedent);
+        this.footer.add(this.suivant);
+        add(this.footer,BorderLayout.SOUTH);
+    }
+
+    public void setHeader() {
+        this.header = new JPanel();
+        this.exit = new JButton(" ");
+        this.title = new JLabel(" ");
+        this.exit.addActionListener(new GUIListener(this));
         this.header.add(this.exit);
-        this.header.add(new JLabel(title));
+        this.header.add(this.title);
+        add(this.header,BorderLayout.NORTH);
+        setHeader("Menu");
+    }
+    public void precedentSetState(boolean state){
+        this.precedent.setEnabled(state);
     }
 }
