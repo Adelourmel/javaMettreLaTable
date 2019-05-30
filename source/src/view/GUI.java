@@ -66,9 +66,10 @@ public class GUI extends JFrame {
 
     /**
      * Initialise header with Title
-     * @param string
+     * @param string Window title
      */
     public void setHeader(String title){
+        this.setTitle(title);
         this.header = new JPanel();
         if(title.equals("Menu")){
             this.exit.setText("close");
@@ -89,12 +90,13 @@ public class GUI extends JFrame {
     }
 
     public void setHeader() {
-        this.header = new JPanel();
+        this.header = new JPanel(new BorderLayout());
         this.exit = new JButton(" ");
         this.title = new JLabel(" ");
+        this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
-        this.header.add(this.exit);
-        this.header.add(this.title);
+        this.header.add(this.exit,BorderLayout.WEST);
+        this.header.add(this.title,BorderLayout.CENTER);
         add(this.header,BorderLayout.NORTH);
         setHeader("Menu");
     }
