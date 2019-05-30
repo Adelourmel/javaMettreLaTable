@@ -25,9 +25,8 @@ public class GUI extends JFrame {
         super("Titre ?");
 
         this.diapo = new Diapositive();
-        this.menu = new Menu(this.chrono);
-
         this.chrono = new Chrono("../data/score.bin");
+        this.menu = new Menu(this.chrono);
 
         this.setHeader();
         this.setFooter();
@@ -68,7 +67,7 @@ public class GUI extends JFrame {
     /**
      * Initialise header with Title
      *
-     * @param stitle Window title
+     * @param title Window title
      */
     public void setHeader(String title) {
         this.setTitle(title);
