@@ -1,7 +1,6 @@
 package view;
 
 import control.MenuListener;
-<<<<<<< HEAD
 import model.Chrono;
 
 import javax.swing.*;
@@ -12,40 +11,19 @@ public class Menu extends JPanel {
 
   private MenuListener listener;
   private JButton buttonMettreTable;
-=======
-import model.*;
 
-import javax.swing.*;
-import java.awt.*;
+  public Menu(Chrono chrono) {
+    super();
 
-public class Menu extends JPanel {
+    this.listener = new MenuListener(this);
 
-    private MenuListener listener;
->>>>>>> 71a9c84cbf9d84ee6133c8cc2479ece074d9f509
-
-    public Menu(Chrono chrono) {
-        super();
-
-        this.listener = new MenuListener(this);
-
-<<<<<<< HEAD
     this.setLayout(new GridLayout(3, 1));
 
     createChoiceBox(chrono);
   }
-=======
-        this.setLayout(new BorderLayout());
 
-        //createChoiceBox(chrono);
-    }
->>>>>>> 71a9c84cbf9d84ee6133c8cc2479ece074d9f509
+  public void createChoiceBox(Chrono chrono) {
 
-    public void createChoiceBox(Chrono chrono) {
-        createRow("Mettre la table", chrono.getBestTime());
-        createRow("Préparer un repas complet", chrono.getBestTime());
-    }
-
-<<<<<<< HEAD
     String temps;
     if (chrono.getBestTime() == -1) {
       temps = "0";
@@ -69,11 +47,6 @@ public class Menu extends JPanel {
     this.add(tmp);
 
     return button;
-=======
-    public JButton createRow(String title, int scores) {
-        JButton ret = new JButton();
->>>>>>> 71a9c84cbf9d84ee6133c8cc2479ece074d9f509
 
-        return ret;
-    }
+  }
 }
