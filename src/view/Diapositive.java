@@ -18,6 +18,7 @@ public class Diapositive extends JPanel {
 
     private JLabel image;
     private JTextArea text;
+    private boolean fin;
 
     public Diapositive() {
         super(new GridLayout(1, 2));
@@ -34,6 +35,7 @@ public class Diapositive extends JPanel {
         this.title = title;
         this.location = location;
         this.index = 0;
+        this.fin = false;
         getContent(this.index);
     }
 
@@ -53,6 +55,7 @@ public class Diapositive extends JPanel {
             this.text.setText(textF);
         } catch (Exception e) {
             fin();
+            this.fin = true;
         }
     }
 
@@ -61,9 +64,13 @@ public class Diapositive extends JPanel {
     }
 
     public void getNext() {
-        this.index++;
-        getContent(this.index);
-        this.gui.getPrecedent().setEnabled(true);
+        if(this.fin){
+            gui.showMenu();
+        } else {
+            this.index++;
+            getContent(this.index);
+            this.gui.getPrecedent().setEnabled(true);
+        }
     }
 
     public void getPrevious() {
@@ -72,6 +79,7 @@ public class Diapositive extends JPanel {
         if (this.index == 0) {
             this.gui.getPrecedent().setEnabled(false);
         }
+        this.fin = false;
     }
 
     public void fin() {
