@@ -1,12 +1,13 @@
 package model;
-import org.apache.commons.io.FileUtils;
-import org.json.JSONObject;
+
+//import org.apache.commons.io.FileUtils;
+//import org.json.JSONObject;
 import java.io.File;
 
 public class JSONRead { 
 
     // Ou peut-être une constructeur, à voir
-    public static void main(String[] args) {
+    public static void main(String[] args) {/**
         try {
             String[] a = readJSON(2);
             System.out.println(a[0]);
@@ -16,9 +17,9 @@ public class JSONRead {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
+        */
     }
-
+/**
     private static String[] readJSON(int index) throws Exception {
         File file = new File("../file.json");
         String content = FileUtils.readFileToString(file, "utf-8");
@@ -31,5 +32,5 @@ public class JSONRead {
         String[] a = {title, dec, loc};
         return a;
     }
-
+*/
 }
