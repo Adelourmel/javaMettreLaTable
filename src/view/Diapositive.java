@@ -56,10 +56,7 @@ public class Diapositive extends JPanel {
             // while (scanner.hasNextLine()) {
                 // textF = textF + scanner.nextLine() + "\n";
             // }
-            JSONRead json = new JSONRead();
-            String[] a = json.readJSON(this.index);
-            String textF = a[0];
-            this.text.setText(textF);
+            this.text.setText(new JSONRead().readJSON(this.index)[1]);
         } catch (Exception e) {
             fin();
             this.fin = true;
