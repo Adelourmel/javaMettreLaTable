@@ -9,6 +9,7 @@ public class GUI extends JFrame {
 
     private Diapositive diapo;
     private Menu menu;
+    private Chrono chrono;
 
     private JPanel header;
     private JButton exit;
@@ -24,6 +25,8 @@ public class GUI extends JFrame {
 
         this.diapo = new Diapositive();
         this.menu = new Menu();
+
+        this.chrono = new Chrono("../data/score.bin");
 
         this.setHeader();
         this.setFooter();
@@ -97,5 +100,9 @@ public class GUI extends JFrame {
     }
     public void precedentSetState(boolean state){
         this.precedent.setEnabled(state);
+    }
+
+    public void getChrono() {
+      return this.chrono;
     }
 }
