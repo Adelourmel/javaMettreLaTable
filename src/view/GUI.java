@@ -73,10 +73,10 @@ public class GUI extends JFrame {
         this.setTitle(title);
         this.header = new JPanel();
         if (title.equals("Menu")) {
-            ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "/source/ButtonIcone/close.png");
+            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
             this.exit.setIcon(icon);
         } else {
-            ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "/source/ButtonIcone/return.png");
+            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
             this.exit.setIcon(icon);
         }
         this.title.setText("<html><font size=15 color = white >" + title + "</font></html>");
