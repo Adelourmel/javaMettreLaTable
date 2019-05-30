@@ -24,7 +24,7 @@ public class GUI extends JFrame {
         super("Titre ?");
 
         this.diapo = new Diapositive();
-        this.menu = new Menu();
+        this.menu = new Menu(this.chrono);
 
         this.chrono = new Chrono("../data/score.bin");
 

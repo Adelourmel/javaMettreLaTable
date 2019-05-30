@@ -9,19 +9,22 @@ public class Menu extends JPanel {
 
   private MenuListener listener;
 
-  public Menu() {
+  public Menu(Chrono chrono) {
     super();
 
     this.listener = new MenuListener(this);
 
     this.setLayout(new BoardLayout());
+
+    createChoiceBox(chrono)
   }
 
-  public void createChoiceBox() {
+  public void createChoiceBox(Chrono chrono) {
 
-    createRow("Mettre la table", )
+    createRow("Mettre la table", chrono.getBestTime());
+    createRow("Préparer un repas complet", chrono)
   }
-  public JPanel createRow(String title, int scores) {
+  public JButton createRow(String title, int scores) {
 
   }
 }
