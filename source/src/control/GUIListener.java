@@ -14,8 +14,7 @@ public class GUIListener implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        JButton button = (JButton) e.getSource();
-        if(button.getText().equals("close")){
+        if(this.gui.getTitle().equals("Menu")){
 
         } else {
             this.gui.showMenu();
