@@ -54,9 +54,9 @@ public class GUI extends JFrame {
      *
      * @param nbSlide The slide number you want to show
      */
-    public void showDiapo(int nbSlide, String title) {
+    public void showDiapo(String title,String directory) {
         setHeader(title);
-        this.diapo = new Diapositive();
+        this.diapo = new Diapositive(title,directory);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
