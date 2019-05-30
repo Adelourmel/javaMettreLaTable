@@ -20,9 +20,7 @@ public class Diapositive extends Panel {
     private JButton exit;
 
     public Diapositive() {
-        super();
-        setLayout(new GridLayout(3,1));
-        makePanel();
+        super(new GridLayout(3,1));
     }
 
     public Diapositive(int nbSlide, String title) {
@@ -46,9 +44,9 @@ public class Diapositive extends Panel {
         this.footer.add(suivant);
         this.footer.add(precedant);
 
-        add(this.header,BorderLayout.SOUTH);
-        add(this.image,BorderLayout.CENTER);
-        add(this.footer,BorderLayout.NORTH);
+        add(this.header);
+        add(this.image);
+        add(this.footer);
     }
 
 }
