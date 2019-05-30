@@ -35,6 +35,8 @@ public class Menu extends JPanel {
     }
 
     this.buttonMettreTable = createRow("Mettre la table", temps);
+    this.buttonMettreTable.addActionListener(this.listener);
+    
     createRow("Preparer un repas complet", "0").setEnabled(false);
     createRow("Debarraser la table", "0").setEnabled(false);
   }
@@ -42,17 +44,24 @@ public class Menu extends JPanel {
   public JButton createRow(String title, String temps) {
     JPanel tmp = new JPanel();
     tmp.setLayout(new BorderLayout());
+
+
     JButton button = new JButton("<html><font size=15 color = white >" + title + "</font></html>");
 
     button.setBackground(new Color(104, 159, 56));
 
     JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "mn</font></html>");
+
     text.setOpaque(true);
     text.setBackground(Color.WHITE);
+
+
     Border line = BorderFactory.createLineBorder(Color.DARK_GRAY);
     Border empty = new EmptyBorder(20, 20, 20, 20);
     CompoundBorder border = new CompoundBorder(line, empty);
     text.setBorder(border);
+
+
 
     tmp.add(button, BorderLayout.CENTER);
     tmp.add(text, BorderLayout.EAST);
@@ -61,5 +70,9 @@ public class Menu extends JPanel {
 
     return button;
 
+  }
+
+  public JButton getbuttonMettreLaTable() {
+    return this.buttonMettreTable;
   }
 }
