@@ -2,171 +2,171 @@
   "1": {
     "title": "Mettre la table - Partie 1",
     "desc": "Aller dans la cuisine",
-    "location": "../img/src/cuisine.png"
+    "location": "../data/img/cuisine.png"
   },
   "2": {
     "title": "Mettre la table - Partie 1",
     "desc": "Vérifier qu'une table est présente",
-    "location": "../img/src/table_vide.png"
+    "location": "../data/img/table_vide.png"
   },
   "3": {
     "title": "Mettre la table - Partie 1",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "4": {
     "title": "Mettre la table - Partie 1",
     "desc": "Prendre la nappe",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "5": {
     "title": "Mettre la table - Partie 1",
     "desc": "Aller dans la cuisine",
-    "location": "../img/src/cuisine.png"
+    "location": "../data/img/cuisine.png"
   },
   "6": {
     "title": "Mettre la table - Partie 1",
     "desc": "Déplier la nappe",
-    "location": "../img/src/nappe.png"
+    "location": "../data/img/nappe.png"
   },
   "7": {
     "title": "Mettre la table - Partie 1",
     "desc": "La mettre sur la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "8": {
     "title": "Mettre la table - Partie 1",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "9": {
     "title": "Mettre la table - Partie 1",
     "desc": "Vérifier qu'une chaise est présente",
-    "location": "../img/src/chaise.png"
+    "location": "../data/img/chaise.png"
   },
   "10": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "11": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre une assiette",
-    "location": "../img/src/assiette.png"
+    "location": "../data/img/assiette.png"
   },
   "12": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "13": {
     "title": "Mettre la table - Partie 2",
     "desc": "Poser l'assiette sur la table en face de la chaise",
-    "location": "../img/src/table_assiette.png"
+    "location": "../data/img/table_assiette.png"
   },
   "14": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "15": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre un verre",
-    "location": "../img/src/verre.png"
+    "location": "../data/img/verre.png"
   },
   "16": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "17": {
     "title": "Mettre la table - Partie 2",
     "desc": "Poser le verre \"juste derrière\" l'assiette",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "18": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "19": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre un couteau",
-    "location": "../img/src/couteau.png"
+    "location": "../data/img/couteau.png"
   },
   "20": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "21": {
     "title": "Mettre la table - Partie 2",
     "desc": "Poser le couteau à droite de l'assiette",
-    "location": "../img/src/table_assiette1.png"
+    "location": "../data/img/table_assiette1.png"
   },
   "22": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "23": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre une fourchette",
-    "location": "../img/src/fourchette.png"
+    "location": "../data/img/fourchette.png"
   },
   "24": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "25": {
     "title": "Mettre la table - Partie 2",
     "desc": "Poser la fourchette à gauche de l'assiette",
-    "location": "../img/src/table_assiette2.png"
+    "location": "../data/img/table_assiette2.png"
   },
   "26": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "27": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre une cuillière",
-    "location": "../img/src/cuilliere.png"
+    "location": "../data/img/cuilliere.png"
   },
   "28": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "29": {
     "title": "Mettre la table - Partie 2",
     "desc": "Poser la cuillière au dessus de l'assiette",
-    "location": "../img/src/table_assiette3.png"
+    "location": "../data/img/table_assiette3.png"
   },
   "30": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger vers le buffet et ouvrir le placard",
-    "location": "../img/src/buffet.png"
+    "location": "../data/img/buffet.png"
   },
   "31": {
     "title": "Mettre la table - Partie 2",
     "desc": "Prendre les serviettes dans le buffet",
-    "location": "../img/src/serviettes.png"
+    "location": "../data/img/serviettes.png"
   },
   "32": {
     "title": "Mettre la table - Partie 2",
     "desc": "Se diriger au niveau de la table",
-    "location": "../img/src/table_nappe.png"
+    "location": "../data/img/table_nappe.png"
   },
   "33": {
     "title": "Mettre la table - Partie 2",
     "desc": "Mettre la serviette sous la fourchette",
-    "location": "../img/src/table_assiette4.png"
+    "location": "../data/img/table_assiette4.png"
   },
   "34": {
     "title": "Terminé !",
     "desc": "Bon appétit !",
-    "location": "../img/src/bon_appetit.png"
+    "location": "../data/img/bon_appetit.png"
   }
 }

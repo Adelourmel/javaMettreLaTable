@@ -41,7 +41,7 @@ public class Menu extends JPanel {
     this.buttonMettreTable.addActionListener(this.listener);
 
     createRow("Preparer un repas complet", "0").setEnabled(false);
-    createRow("Debarraser la table", "0").setEnabled(false);
+    createRow("Débarrasser la table", "0").setEnabled(false);
   }
 
   public JButton createRow(String title, String temps) {
