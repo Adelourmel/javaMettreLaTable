@@ -15,13 +15,13 @@ public class Menu extends JPanel {
   private MenuListener listener;
   private JButton buttonMettreTable;
 
-  public Menu(Chrono chrono) {
+  public Menu(GUI chrono) {
     super();
 
-    this.listener = new MenuListener(this);
+    this.listener = new MenuListener(gui);
 
     this.setLayout(new GridLayout(3, 1));
-    createChoiceBox(chrono);
+    createChoiceBox(gui.getChrono());
   }
 
   public void createChoiceBox(Chrono chrono) {
