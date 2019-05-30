@@ -15,7 +15,7 @@ public class Menu extends JPanel {
   private MenuListener listener;
   private JButton buttonMettreTable;
 
-  public Menu(GUI chrono) {
+  public Menu(GUI gui) {
     super();
 
     this.listener = new MenuListener(gui);
