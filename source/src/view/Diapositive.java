@@ -1,7 +1,6 @@
 package view;
 
-import control.DiapositiveListener;
-import javafx.scene.layout.BorderPane;
+import model.JSONRead;
 
 import javax.swing.*;
 import java.awt.*;
