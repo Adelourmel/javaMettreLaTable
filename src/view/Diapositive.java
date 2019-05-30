@@ -36,15 +36,20 @@ public class Diapositive extends JPanel {
 
     public void getText(int index) {
         try {
-            FileReader fr = new FileReader("..\\data\\"+this.location + "\\" + this.index + ".txt");
-            Scanner scanner = new Scanner(fr);
-            String text = "";
-            while (scanner.hasNextLine()) {
-                text += scanner.nextLine()+"\n";
-            }
-            this.text.setText(text);
+            try {
+                FileReader fr = new FileReader("..\\data\\" + this.location + "\\" + this.index + ".txt");
+                Scanner scanner = new Scanner(fr);
+                String text = "";
+                while (scanner.hasNextLine()) {
+                    text += scanner.nextLine() + "\n";
+                }
+                this.text.setText(text);
 
-            this.text.setText(text);
+                this.text.setText(text);
+            }
+            catch (Exception e){
+                System.out.println("erreur :"+e);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
