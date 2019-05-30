@@ -28,7 +28,10 @@ public class Diapositive extends JPanel {
     public Diapositive(GUI gui, String title, String location) {
         super(new GridLayout(1, 2));
         this.text = new JTextArea();
+        this.text.setAlignmentX(CENTER_ALIGNMENT);
+        this.text.setMargin(new Insets(50,50,50,50));
         this.image = new JLabel();
+        this.image.setHorizontalAlignment(SwingConstants.CENTER);
         add(text);
         add(image);
         this.gui = gui;
