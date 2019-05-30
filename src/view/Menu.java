@@ -12,6 +12,8 @@ import javax.swing.border.*;
 
 public class Menu extends JPanel {
 
+  public GUI gui;
+
   private MenuListener listener;
   private JButton buttonMettreTable;
 
@@ -22,6 +24,7 @@ public class Menu extends JPanel {
 
     this.setLayout(new GridLayout(3, 1));
     createChoiceBox(gui.getChrono());
+    this.gui = gui;
   }
 
   public void createChoiceBox(Chrono chrono) {

@@ -14,7 +14,7 @@ public class Diapositive extends JPanel {
     private String desc;
 
     private JLabel image;
-    private JLabel text;
+    private JTextArea text;
 
     public Diapositive() {
         super(new GridLayout(1, 2));
@@ -23,10 +23,14 @@ public class Diapositive extends JPanel {
 
     public Diapositive(String title, String location) {
         super(new GridLayout(1, 2));
+        this.text = new JTextArea();
+        this.image = new JLabel();
+        add(text);
+        add(image);
         this.title = title;
         this.location = location;
         this.index = 0;
-        getText(this.index);//test normal si erreur il y a
+        getContent(this.index);
     }
 
     public void getContent(int index) {
@@ -36,27 +40,20 @@ public class Diapositive extends JPanel {
 
     public void getText(int index) {
         try {
-            try {
-                FileReader fr = new FileReader("..\\data\\" + this.location + "\\" + this.index + ".txt");
-                Scanner scanner = new Scanner(fr);
-                String text = "";
-                while (scanner.hasNextLine()) {
-                    text += scanner.nextLine() + "\n";
-                }
-                this.text.setText(text);
-
-                this.text.setText(text);
+            FileReader fr = new FileReader(this.location + "\\" + this.index + ".txt");
+            Scanner scanner = new Scanner(fr);
+            String textF = "";
+            while (scanner.hasNextLine()) {
+                textF = textF + scanner.nextLine() + "\n";
             }
-            catch (Exception e){
-                System.out.println("erreur :"+e);
-            }
+            this.text.setText(textF);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("erreur :" + e);
         }
     }
 
     public void getImage(int index) {
-        this.text.setIcon(new ImageIcon("..\\data\\"+this.location + "\\" + this.index + ".txt"));
+        this.image.setIcon(new ImageIcon("..\\data\\" + this.location + "\\" + this.index + ".png"));
     }
 
     public void getNext() {
