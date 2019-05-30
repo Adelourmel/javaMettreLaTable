@@ -18,6 +18,7 @@ public class Diapositive extends JPanel {
 
     private JLabel image;
     private JTextArea text;
+    // private JLabel text;
     private boolean fin;
 
     public Diapositive() {
@@ -29,6 +30,10 @@ public class Diapositive extends JPanel {
         super(new GridLayout(1, 2));
         setBackground(Color.white);
         this.text = new JTextArea();
+        Font font = new Font("Verdana", Font.BOLD, 20);
+        this.text.setFont(font);
+
+        // this.text = new JLabel();
         this.text.setAlignmentX(CENTER_ALIGNMENT);
         this.text.setMargin(new Insets(50,50,50,50));
         this.image = new JLabel();
