@@ -50,14 +50,18 @@ public class GUI extends JFrame {
         pack();
     }
 
-    public void setHeader(String string){
+    /**
+     * Initialise header with Title
+     * @param string
+     */
+    public void setHeader(String title){
         this.header = new JPanel();
-        if(string.equals("Menu")){
+        if(title.equals("Menu")){
             this.exit = new JButton("close");
         } else {
             this.exit = new JButton("exit");
         }
         this.header.add(this.exit);
-        this.header.add(new JLabel(string));
+        this.header.add(new JLabel(title));
     }
 }
