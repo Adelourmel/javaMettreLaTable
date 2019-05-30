@@ -29,23 +29,8 @@ public class Chrono {
 
   private int saveIfItBest() {
 
-    int score = -1;
+    int score = getBestTime();
 
-    try {
-      DataInputStream in = new DataInputStream(new FileInputStream(this.fileName));
-
-
-
-      score = in.readInt();
-
-
-      in.close();
-
-    } catch (IOException e) {
-      System.out.println(e.getMessage());
-      writeInFile();
-
-    }
     if (score != -1) {
       if (score > this.finalTime) {
         score = -1;
@@ -57,6 +42,26 @@ public class Chrono {
 
 
   }
+
+  public int getBestTime() {
+
+    int ret = -1;
+
+    try {
+      DataInputStream in = new DataInputStream(new FileInputStream(this.fileName));
+
+      ret = in.readInt();
+
+      in.close();
+
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
+    }
+
+    return ret;
+
+  }
+
 
   private void writeInFile() {
     try {
