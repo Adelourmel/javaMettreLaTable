@@ -28,7 +28,7 @@ public class Diapositive extends JPanel {
     public void getText(int index) {
         try {
             FileReader fr = new FileReader(this.location+"/"+this.index+".txt");
-            String text = fr.read();
+            String text = "getText a finir";
             this.text.setText(text);
         }
         catch (Exception e) {
