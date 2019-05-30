@@ -25,28 +25,12 @@ public class GUI extends JFrame {
         this.diapo = new Diapositive();
         this.menu = new Menu();
 
+        this.setHeader();
+        this.setFooter();
         // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
-
-        //header
-        this.header = new JPanel();
-        this.exit = new JButton(" ");
-        this.title = new JLabel(" ");
-        this.exit.addActionListener(new GUIListener(this));
-        this.header.add(this.exit);
-        this.header.add(this.title);
-        add(this.header,BorderLayout.NORTH);
-        setHeader("Menu");
-
-        //footer
-        this.footer = new JPanel();
-        this.suivant = new JButton("Suivant");
-        this.precedent = new JButton("Précédent");
-        this.footer.add(this.precedent);
-        this.footer.add(this.suivant);
-        add(this.footer,BorderLayout.SOUTH);
     }
 
     /**
@@ -72,6 +56,7 @@ public class GUI extends JFrame {
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
+        this.precedent.setEnabled(false);
         repaint();
         pack();
     }
@@ -89,5 +74,28 @@ public class GUI extends JFrame {
         }
         this.title.setText(title);
         repaint();
+    }
+
+    public void setFooter() {
+        this.footer = new JPanel();
+        this.suivant = new JButton("Suivant");
+        this.precedent = new JButton("Précédent");
+        this.footer.add(this.precedent);
+        this.footer.add(this.suivant);
+        add(this.footer,BorderLayout.SOUTH);
+    }
+
+    public void setHeader() {
+        this.header = new JPanel();
+        this.exit = new JButton(" ");
+        this.title = new JLabel(" ");
+        this.exit.addActionListener(new GUIListener(this));
+        this.header.add(this.exit);
+        this.header.add(this.title);
+        add(this.header,BorderLayout.NORTH);
+        setHeader("Menu");
+    }
+    public void precedentSetState(boolean state){
+        this.precedent.setEnabled(state);
     }
 }
