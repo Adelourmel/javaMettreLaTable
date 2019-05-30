@@ -124,4 +124,8 @@ public class GUI extends JFrame {
     public Chrono getChrono() {
       return this.chrono;
     }
+
+    public Menu getMenu() {
+      return this.menu;
+    }
 }
