@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d61c8326-f5a8-4c9d-9995-e718b0289fe6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/view/Diapositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/view/Diapositive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/src/view/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/view/GUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,11 +69,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/src/view/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="293">
+              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3585#3586#0" expanded="true" />
+                <element signature="e#3562#3563#0" expanded="true" />
                 <element signature="e#3264#3265#0" expanded="true" />
                 <element signature="e#3302#3303#0" expanded="true" />
                 <element signature="e#3333#3334#0" expanded="true" />
@@ -85,11 +86,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/src/control/GUIListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="272">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,12 +98,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/src/view/Diapositive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="512">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,6 +120,7 @@
     <findStrings>
       <find>add</find>
       <find>pack()</find>
+      <find>addA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,10 +137,10 @@
         <option value="$PROJECT_DIR$/source/src/Score.java" />
         <option value="$PROJECT_DIR$/source/src/control/MenuListener.java" />
         <option value="$PROJECT_DIR$/source/src/control/DiapositiveListener.java" />
-        <option value="$PROJECT_DIR$/source/src/view/Diapositive.java" />
         <option value="$PROJECT_DIR$/source/src/Launcher.java" />
-        <option value="$PROJECT_DIR$/source/src/control/GUIListener.java" />
         <option value="$PROJECT_DIR$/source/src/view/Menu.java" />
+        <option value="$PROJECT_DIR$/source/src/control/GUIListener.java" />
+        <option value="$PROJECT_DIR$/source/src/view/Diapositive.java" />
         <option value="$PROJECT_DIR$/source/src/view/GUI.java" />
       </list>
     </option>
@@ -244,7 +243,7 @@
       <workItem from="1559073438153" duration="1789000" />
       <workItem from="1559149035505" duration="242000" />
       <workItem from="1559210061479" duration="2009000" />
-      <workItem from="1559214473663" duration="16657000" />
+      <workItem from="1559214473663" duration="18045000" />
     </task>
     <task id="LOCAL-00001" summary="fix bug !">
       <created>1558981861498</created>
@@ -407,11 +406,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559230266092</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="bug creation objet menu.">
+      <created>1559231408075</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559231408075</updated>
+    </task>
+    <task id="LOCAL-00025" summary="bug creation objet menu.">
+      <created>1559232120563</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1559232120563</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29187000" />
+    <option name="totallyTimeSpent" value="30575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -427,7 +440,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.32914925" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.32914925" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,7 +478,8 @@
     <MESSAGE value="GUI modification" />
     <MESSAGE value="Footer et header" />
     <MESSAGE value="header" />
-    <option name="LAST_COMMIT_MESSAGE" value="header" />
+    <MESSAGE value="bug creation objet menu." />
+    <option name="LAST_COMMIT_MESSAGE" value="bug creation objet menu." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -492,18 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/src/view/Diapositive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/src/Todo.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -516,17 +518,6 @@
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/src/control/GUIListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,10 +543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/src/control/DiapositiveListener.java">
+    <entry file="file://$PROJECT_DIR$/source/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="168">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -572,10 +563,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/src/Launcher.java">
+    <entry file="file://$PROJECT_DIR$/source/src/control/GUIListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="272">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/src/control/DiapositiveListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/src/view/Diapositive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -584,11 +595,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/src/view/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+        <state relative-caret-position="293">
+          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
+            <element signature="e#3562#3563#0" expanded="true" />
             <element signature="e#3264#3265#0" expanded="true" />
             <element signature="e#3302#3303#0" expanded="true" />
             <element signature="e#3333#3334#0" expanded="true" />

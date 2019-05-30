@@ -56,7 +56,7 @@ public class GUI extends JFrame {
      */
     public void showDiapo(int nbSlide, String title) {
         setHeader(title);
-        this.diapo = new Diapositive(nbSlide, title);
+        this.diapo = new Diapositive();
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);

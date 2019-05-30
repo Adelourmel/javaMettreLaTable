@@ -12,22 +12,24 @@ public class Diapositive extends JPanel {
     private String file;
 
     private JLabel image;
+    private JLabel text;
 
     public Diapositive() {
-        super(new GridLayout(3,1));
-    }
-
-    public Diapositive(int nbSlide, String title) {
-        super();
-        this.nbSlide = nbSlide;
-        this.file = title;
+        super(new GridLayout(3, 1));
         this.index = 0;
-        makePanel();
     }
 
-    public void makePanel(){
-        this.image = new JLabel("?/img/");
-        add(this.image);
+    public void getContent(int index) {
+        getText(index);
+        getImage(index);
+    }
+
+    public void getText(int index) {
+
+    }
+
+    public void getImage(int index) {
+
     }
 
 }
