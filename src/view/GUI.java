@@ -2,6 +2,7 @@ package view;
 
 import control.DiapositiveListener;
 import control.GUIListener;
+import javafx.geometry.Orientation;
 import model.*;
 
 import javax.swing.*;
@@ -16,6 +17,7 @@ public class GUI extends JFrame {
     private JPanel header;
     private JButton exit;
     private JLabel title;
+    private JProgressBar progressBar;
 
     private JPanel footer;
     private JButton suivant;
@@ -112,8 +114,10 @@ public class GUI extends JFrame {
         this.title = new JLabel();
         this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
+        this.progressBar = new JProgressBar();
         this.header.add(this.exit, BorderLayout.WEST);
         this.header.add(this.title, BorderLayout.CENTER);
+        this.header.add(this.progressBar,BorderLayout.SOUTH);
         add(this.header, BorderLayout.NORTH);
         setHeader("Menu");
     }
