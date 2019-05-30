@@ -33,6 +33,8 @@ public class GUI extends JFrame {
         this.setFooter();
         // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new Dimension(800,500));
+        setMinimumSize(new Dimension(800,500));
         pack();
         setVisible(true);
     }
@@ -53,9 +55,9 @@ public class GUI extends JFrame {
      *
      * @param nbSlide The slide number you want to show
      */
-    public void showDiapo(int nbSlide,String title) {
+    public void showDiapo(int nbSlide, String title) {
         setHeader(title);
-        this.diapo=new Diapositive(nbSlide,title);
+        this.diapo = new Diapositive(nbSlide, title);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
@@ -65,11 +67,16 @@ public class GUI extends JFrame {
 
     /**
      * Initialise header with Title
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> df2139895a11b0a5d3f31a2d4d893915edb81f58
      * @param stitle Window title
      */
-    public void setHeader(String title){
+    public void setHeader(String title) {
         this.setTitle(title);
         this.header = new JPanel();
+<<<<<<< HEAD
         if(title.equals("Menu")){
             ImageIcon icon= new ImageIcon(System.getProperty("user.dir")+"/source/ButtonIcone/close.png");
             this.exit.setIcon(icon);
@@ -78,23 +85,48 @@ public class GUI extends JFrame {
             this.exit.setIcon(icon);
         }
         this.title.setText("<html><font color = white >"+title+"</font></html>");
+=======
+        if (title.equals("Menu")) {
+            ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "/source/ButtonIcone/close.png");
+            this.exit.setIcon(icon);
+        } else {
+            ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "/source/ButtonIcone/return.png");
+            this.exit.setIcon(icon);
+        }
+        this.title.setText("<html><font size=15 color = white >" + title + "</font></html>");
+>>>>>>> df2139895a11b0a5d3f31a2d4d893915edb81f58
         repaint();
     }
 
     public void setFooter() {
+<<<<<<< HEAD
         this.footer = new JPanel(new GridLayout(1,2));
         this.suivant = new JButton("Suivant");
         this.precedent = new JButton("Précédent");
+=======
+        this.footer = new JPanel(new GridLayout(1, 2));
+        this.suivant = new JButton("<html><font size=15 color = white>Suivant</font></html>");
+        this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
+        this.suivant.setBackground(new Color(104, 159, 56));
+        this.precedent.setBackground(new Color(104, 159, 56));
+
+>>>>>>> df2139895a11b0a5d3f31a2d4d893915edb81f58
         this.footer.add(this.precedent);
         this.footer.add(this.suivant);
-        add(this.footer,BorderLayout.SOUTH);
+        add(this.footer, BorderLayout.SOUTH);
     }
 
     public void setHeader() {
         this.header = new JPanel(new BorderLayout());
+<<<<<<< HEAD
         this.header.setBackground(new Color(104,159,56));
         this.exit = new JButton();
         this.exit.setPreferredSize(new Dimension(50,50));
+=======
+        this.header.setBackground(new Color(104, 159, 56));
+        this.exit = new JButton();
+        this.exit.setPreferredSize(new Dimension(50, 50));
+>>>>>>> df2139895a11b0a5d3f31a2d4d893915edb81f58
         this.exit.setBackground(null);
         this.exit.setBorderPainted(false);
         this.exit.setFocusPainted(false);
@@ -102,12 +134,13 @@ public class GUI extends JFrame {
         this.title = new JLabel();
         this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
-        this.header.add(this.exit,BorderLayout.WEST);
-        this.header.add(this.title,BorderLayout.CENTER);
-        add(this.header,BorderLayout.NORTH);
+        this.header.add(this.exit, BorderLayout.WEST);
+        this.header.add(this.title, BorderLayout.CENTER);
+        add(this.header, BorderLayout.NORTH);
         setHeader("Menu");
     }
-    public void precedentSetState(boolean state){
+
+    public void precedentSetState(boolean state) {
         this.precedent.setEnabled(state);
     }
 
@@ -116,6 +149,10 @@ public class GUI extends JFrame {
     }
 
     public Chrono getChrono() {
+<<<<<<< HEAD
       return this.chrono;
+=======
+        return this.chrono;
+>>>>>>> df2139895a11b0a5d3f31a2d4d893915edb81f58
     }
 }
