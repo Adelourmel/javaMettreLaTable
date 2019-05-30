@@ -18,7 +18,7 @@ public class Menu extends JPanel {
   public Menu(GUI gui) {
     super();
 
-    this.listener = new MenuListener(gui);
+    this.listener = new MenuListener(this);
 
     this.setLayout(new GridLayout(3, 1));
     createChoiceBox(gui.getChrono());

@@ -1,5 +1,6 @@
 package test;
 
+import view.GUI;
 import view.Menu;
 import model.Chrono;
 import javax.swing.JFrame;
@@ -9,7 +10,7 @@ public class TestMenu extends JFrame {
 
       super("Test");
       Chrono test = new Chrono("../data/score.bin");
-      add(new Menu(test));
+      add(new Menu(new GUI()));
 
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       pack();
