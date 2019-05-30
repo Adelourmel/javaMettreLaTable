@@ -6,7 +6,7 @@ import javafx.scene.layout.BorderPane;
 import javax.swing.*;
 import java.awt.*;
 
-public class Diapositive extends Panel {
+public class Diapositive extends JPanel {
     private int index;
     private int nbSlide;
     private String file;
