@@ -1,5 +1,7 @@
 package view;
 
+import control.GUIListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,20 +9,29 @@ public class GUI extends JFrame {
 
     private Diapositive diapo;
     private Menu menu;
+
     private JPanel header;
     private JButton exit;
+    private JLabel title;
 
     public GUI() {
+        //GUI
         super("Titre ?");
 
         this.diapo = new Diapositive();
         this.menu = new Menu();
-
-        setHeader("Menu");
+        //header
+        this.header = new JPanel();
+        this.exit = new JButton(" ");
+        this.title = new JLabel(" ");
+        this.exit.addActionListener(new GUIListener(this));
+        this.header.add(this.exit);
+        this.header.add(this.title);
         add(this.header,BorderLayout.NORTH);
+        setHeader("Menu");
 
+        // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         pack();
         setVisible(true);
     }
@@ -30,8 +41,8 @@ public class GUI extends JFrame {
      */
     public void showMenu() {
         setHeader("Menu");
-        add(this.menu);
         remove(this.diapo);
+        add(this.menu);
         repaint();
         pack();
     }
@@ -57,11 +68,11 @@ public class GUI extends JFrame {
     public void setHeader(String title){
         this.header = new JPanel();
         if(title.equals("Menu")){
-            this.exit = new JButton("close");
+            this.exit.setText("close");
         } else {
-            this.exit = new JButton("exit");
+            this.exit.setText("exit");
         }
-        this.header.add(this.exit);
-        this.header.add(new JLabel(title));
+        this.title.setText(title);
+        repaint();
     }
 }
