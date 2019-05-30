@@ -21,7 +21,7 @@ public class Diapositive extends Panel {
 
     public Diapositive() {
         super();
-        setLayout(new BorderLayout());
+        setLayout(new GridLayout(3,1));
         makePanel();
     }
 
@@ -34,7 +34,7 @@ public class Diapositive extends Panel {
     }
 
     public void makePanel(){
-        this.footer = new JPanel();
+        this.footer = new JPanel(new GridLayout(1,2));
         this.image = new JLabel("?/img/");
         this.header = new JPanel();
 
