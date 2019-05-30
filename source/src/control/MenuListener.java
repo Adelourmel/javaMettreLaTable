@@ -12,6 +12,8 @@ public class MenuListener implements ActionListener {
   }
 
   public void actionPerformed(ActionEvent e) {
-
+    if (e.getSource() == this.menu.getbuttonMettreLaTable()) {
+      System.out.println("YOp");
+    }
   }
 }
