@@ -9,7 +9,6 @@ public class TestMenu extends JFrame {
 
       super("Test");
       Chrono test = new Chrono("../data/score.bin");
-      System.out.println("yop");
       add(new Menu(test));
 
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
