@@ -14,12 +14,22 @@ public class GUI extends JFrame {
     private JButton exit;
     private JLabel title;
 
+    private JPanel footer;
+    private JButton suivant;
+    private JButton precedent;
+
     public GUI() {
         //GUI
         super("Titre ?");
 
         this.diapo = new Diapositive();
         this.menu = new Menu();
+
+        // GUI configuration.
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+
         //header
         this.header = new JPanel();
         this.exit = new JButton(" ");
@@ -30,10 +40,13 @@ public class GUI extends JFrame {
         add(this.header,BorderLayout.NORTH);
         setHeader("Menu");
 
-        // GUI configuration.
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        pack();
-        setVisible(true);
+        //footer
+        this.footer = new JPanel();
+        this.suivant = new JButton("Suivant");
+        this.precedent = new JButton("Précédent");
+        this.footer.add(this.precedent);
+        this.footer.add(this.suivant);
+        add(this.footer,BorderLayout.SOUTH);
     }
 
     /**
@@ -43,6 +56,7 @@ public class GUI extends JFrame {
         setHeader("Menu");
         remove(this.diapo);
         add(this.menu);
+        this.footer.setVisible(false);
         repaint();
         pack();
     }
@@ -57,6 +71,7 @@ public class GUI extends JFrame {
         this.diapo=new Diapositive(nbSlide,title);
         add(this.diapo);
         remove(this.menu);
+        this.footer.setVisible(true);
         repaint();
         pack();
     }
