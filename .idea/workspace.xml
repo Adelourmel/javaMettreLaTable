@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-876">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="-252">
+              <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -57,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/GUIListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="204">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+            <state relative-caret-position="264">
+              <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
               <folding>
                 <element signature="e#3746#3747#0" expanded="true" />
                 <element signature="e#3776#3777#0" expanded="true" />
@@ -75,6 +75,8 @@
                 <element signature="e#3845#3846#0" expanded="true" />
                 <element signature="e#3976#3977#0" expanded="true" />
                 <element signature="e#4004#4005#0" expanded="true" />
+                <element signature="e#4233#4234#0" expanded="true" />
+                <element signature="e#4267#4268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,6 +136,7 @@
       <find>addA</find>
       <find>ena</find>
       <find>setE</find>
+      <find>setH</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,10 +148,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/view/Menu.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/control/GUIListener.java" />
         <option value="$PROJECT_DIR$/src/control/MenuListener.java" />
         <option value="$PROJECT_DIR$/src/control/DiapositiveListener.java" />
         <option value="$PROJECT_DIR$/src/view/Diapositive.java" />
+        <option value="$PROJECT_DIR$/src/control/GUIListener.java" />
         <option value="$PROJECT_DIR$/src/view/GUI.java" />
       </list>
     </option>
@@ -253,7 +256,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559237287457</updated>
-      <workItem from="1559237289105" duration="6530000" />
+      <workItem from="1559237289105" duration="7717000" />
     </task>
     <task id="LOCAL-00001" summary="rèsolution bug fichier modifier">
       <created>1559237919447</created>
@@ -325,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559243555755</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ajout progress bar.">
+      <created>1559243926574</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559243926574</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6530000" />
+    <option name="totallyTimeSpent" value="7717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -376,7 +386,8 @@
     <MESSAGE value="." />
     <MESSAGE value="modif image test" />
     <MESSAGE value="correction bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction bug" />
+    <MESSAGE value="ajout progress bar." />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout progress bar." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
@@ -423,17 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/GUIListener.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-876">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="96">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -444,17 +448,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/control/GUIListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+        <state relative-caret-position="264">
+          <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
           <folding>
             <element signature="e#3746#3747#0" expanded="true" />
             <element signature="e#3776#3777#0" expanded="true" />
@@ -462,6 +473,8 @@
             <element signature="e#3845#3846#0" expanded="true" />
             <element signature="e#3976#3977#0" expanded="true" />
             <element signature="e#4004#4005#0" expanded="true" />
+            <element signature="e#4233#4234#0" expanded="true" />
+            <element signature="e#4267#4268#0" expanded="true" />
           </folding>
         </state>
       </provider>

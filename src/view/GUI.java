@@ -78,11 +78,13 @@ public class GUI extends JFrame {
         this.setTitle(title);
         this.header = new JPanel();
         if (title.equals("Menu")) {
-            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
+            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\close.png");
             this.exit.setIcon(icon);
+            this.progressBar.setVisible(false);
         } else {
             ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
             this.exit.setIcon(icon);
+            this.progressBar.setVisible(true);
         }
         this.title.setText("<html><font size=15 color = white >" + title + "</font></html>");
         repaint();
@@ -144,5 +146,9 @@ public class GUI extends JFrame {
 
     public Diapositive getDiapo() {
         return diapo;
+    }
+
+    public JProgressBar getProgressBar() {
+        return progressBar;
     }
 }
