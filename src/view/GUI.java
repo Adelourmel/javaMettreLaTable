@@ -1,5 +1,6 @@
 package view;
 
+import control.DiapositiveListener;
 import control.GUIListener;
 import model.*;
 
@@ -35,6 +36,7 @@ public class GUI extends JFrame {
         setPreferredSize(new Dimension(800,500));
         setMinimumSize(new Dimension(800,500));
         pack();
+        showMenu();
         setVisible(true);
     }
 
@@ -52,15 +54,16 @@ public class GUI extends JFrame {
     /**
      * Allow to show the diapo
      *
-     * @param nbSlide The slide number you want to show
+     * @param title
+     * @param directory
      */
     public void showDiapo(String title,String directory) {
         setHeader(title);
-        this.diapo = new Diapositive(title,directory);
+        this.diapo = new Diapositive(this,title,directory);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
-        this.precedentSetState(false);
+        this.precedent.setEnabled(false);
         repaint();
     }
 
@@ -89,6 +92,8 @@ public class GUI extends JFrame {
         this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
         this.suivant.setBackground(new Color(104, 159, 56));
         this.precedent.setBackground(new Color(104, 159, 56));
+        this.suivant.addActionListener(new DiapositiveListener(this));
+        this.suivant.addActionListener(new DiapositiveListener(this));
 
         this.footer.add(this.precedent);
         this.footer.add(this.suivant);
@@ -113,10 +118,6 @@ public class GUI extends JFrame {
         setHeader("Menu");
     }
 
-    public void precedentSetState(boolean state) {
-        this.precedent.setEnabled(state);
-    }
-
     public String getTitle() {
         return title.getText();
     }
@@ -127,5 +128,17 @@ public class GUI extends JFrame {
 
     public Menu getMenu() {
       return this.menu;
+    }
+
+    public JButton getSuivant() {
+        return suivant;
+    }
+
+    public JButton getPrecedent() {
+        return precedent;
+    }
+
+    public Diapositive getDiapo() {
+        return diapo;
     }
 }

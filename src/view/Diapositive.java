@@ -8,6 +8,9 @@ import java.awt.*;
 import java.io.FileReader;
 
 public class Diapositive extends JPanel {
+
+    public GUI gui;
+
     private int index;
     private String title;
     private String location;
@@ -21,12 +24,13 @@ public class Diapositive extends JPanel {
         this.index = 0;
     }
 
-    public Diapositive(String title, String location) {
+    public Diapositive(GUI gui, String title, String location) {
         super(new GridLayout(1, 2));
         this.text = new JTextArea();
         this.image = new JLabel();
         add(text);
         add(image);
+        this.gui = gui;
         this.title = title;
         this.location = location;
         this.index = 0;
@@ -59,10 +63,14 @@ public class Diapositive extends JPanel {
     public void getNext() {
         this.index++;
         getContent(this.index);
+        if(this.index==0){
+            this.gui.getPrecedent().setEnabled(false);
+        }
     }
 
     public void getPrevious() {
         this.index--;
         getContent(this.index);
+        this.gui.getPrecedent().setEnabled(true);
     }
 }

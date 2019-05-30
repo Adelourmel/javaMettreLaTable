@@ -1,17 +1,25 @@
 package control;
 
-import view.Diapositive;
+import view.*;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DiapositiveListener implements ActionListener {
-  private Diapositive diapositive;
-  public DiapositiveListener(Diapositive diapositive) {
-    this.diapositive = diapositive;
-  }
+    private GUI gui;
+    private Diapositive diapositive;
 
-  public void actionPerformed(ActionEvent e) {
+    public DiapositiveListener(GUI gui) {
+        this.gui = gui;
+    }
 
-  }
+    public void actionPerformed(ActionEvent e) {
+        JButton button = (JButton) e.getSource();
+        if (button == gui.getPrecedent()) {
+            gui.getDiapo().getPrevious();
+        } else if (button == gui.getSuivant()) {
+            gui.getDiapo().getNext();
+        }
+    }
 }
