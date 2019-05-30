@@ -63,7 +63,7 @@ public class GUI extends JFrame {
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
-        this.precedent.setEnabled(false);
+        //this.precedent.setEnabled(false);
         repaint();
     }
 
@@ -92,7 +92,7 @@ public class GUI extends JFrame {
         this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
         this.suivant.setBackground(new Color(104, 159, 56));
         this.precedent.setBackground(new Color(104, 159, 56));
-        this.suivant.addActionListener(new DiapositiveListener(this));
+        this.precedent.addActionListener(new DiapositiveListener(this));
         this.suivant.addActionListener(new DiapositiveListener(this));
 
         this.footer.add(this.precedent);

@@ -52,7 +52,7 @@ public class Diapositive extends JPanel {
             }
             this.text.setText(textF);
         } catch (Exception e) {
-            System.out.println("erreur :" + e);
+            fin();
         }
     }
 
@@ -63,14 +63,18 @@ public class Diapositive extends JPanel {
     public void getNext() {
         this.index++;
         getContent(this.index);
-        if(this.index==0){
-            this.gui.getPrecedent().setEnabled(false);
-        }
+        this.gui.getPrecedent().setEnabled(true);
     }
 
     public void getPrevious() {
         this.index--;
         getContent(this.index);
-        this.gui.getPrecedent().setEnabled(true);
+        if (this.index == 0) {
+            this.gui.getPrecedent().setEnabled(false);
+        }
+    }
+
+    public void fin() {
+        this.text.setText("fin");
     }
 }
