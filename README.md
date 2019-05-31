@@ -1,3 +1,11 @@
 # javaMettreLaTable
 
-Afin d'aider les personnes ayant l'Alzheimer, nous avons eu l'idée révolutionnaire de créer une application "tutorielle" permettant d'apprendre / d'aider l'utilisateur à mettre la table.
+Application réalisée en une semaine dans le cas d'un projet universitaire. 
+
+```bash
+git clone https://github.com/Adelourmel/javaMettreLaTable
+chmod +x run_linux.sh
+./run_linux.sh
+```
+
+Réalisé par @ADelourmel, @kernoeb et @Cayril 
