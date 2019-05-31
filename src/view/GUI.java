@@ -28,7 +28,7 @@ public class GUI extends JFrame {
         super("Titre ?");
 
         this.diapo = new Diapositive();
-        this.chrono = new Chrono("..\\data\\score.bin");
+        this.chrono = new Chrono("data\\score.bin");
         this.menu = new Menu(this);
 
         this.setHeader();
@@ -78,11 +78,11 @@ public class GUI extends JFrame {
         this.setTitle(title);
         this.header = new JPanel();
         if (title.equals("Menu")) {
-            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\close.png");
+            ImageIcon icon = new ImageIcon("data\\buttonsIcons\\close.png");
             this.exit.setIcon(icon);
             this.progressBar.setVisible(false);
         } else {
-            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
+            ImageIcon icon = new ImageIcon("data\\buttonsIcons\\return.png");
             this.exit.setIcon(icon);
             this.progressBar.setVisible(true);
         }

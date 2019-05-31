@@ -22,7 +22,7 @@ public class JSONRead {
     }
 
     public static String[] readJSON(int index) throws Exception {
-        File file = new File("../data/file.json");
+        File file = new File("data/file.json");
         String content = FileUtils.readFileToString(file, "utf-8");
         JSONObject json = new JSONObject(content);   
 
