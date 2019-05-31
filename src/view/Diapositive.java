@@ -29,7 +29,6 @@ public class Diapositive extends JPanel {
     public Diapositive() {
         super(new GridLayout(1, 2));
         this.index = 0;
-
     }
 
     public Diapositive(GUI gui, String title, String location) {
