@@ -12,6 +12,7 @@ public class Diapositive extends JPanel {
     public GUI gui;
 
     private int index;
+    private int maxIndex; //use for progress bar.
     private String title;
     private String location;
     private String desc;
@@ -23,7 +24,7 @@ public class Diapositive extends JPanel {
 
     public Diapositive() {
         super(new GridLayout(1, 2));
-        this.index = 0;
+        this.index = 1;
     }
 
     public Diapositive(GUI gui, String title, String location) {
@@ -46,11 +47,13 @@ public class Diapositive extends JPanel {
         this.index = 1;
         this.fin = false;
         getContent(this.index);
+        getMaxIndex();
     }
 
     public void getContent(int index) {
         getText(index);
         getImage(index);
+        gui.getProgressBar().setValue(this.index);
     }
 
     public void getText(int index) {
@@ -90,7 +93,7 @@ public class Diapositive extends JPanel {
     public void getPrevious() {
         this.index--;
         getContent(this.index);
-        if (this.index == 0) {
+        if (this.index == 1) {
             this.gui.getPrecedent().setEnabled(false);
         }
         this.fin = false;
@@ -98,5 +101,20 @@ public class Diapositive extends JPanel {
 
     public void fin() {
         this.text.setText("fin");
+    }
+
+    public void getMaxIndex() {
+        this.maxIndex = 1;
+        try {
+            while (true) {
+                new JSONRead().readJSON(this.maxIndex);
+                this.maxIndex ++;
+            }
+        }
+        catch (Exception e){}
+        finally {
+            this.gui.getProgressBar().setMinimum(0);
+            this.gui.getProgressBar().setMaximum(this.maxIndex);
+        }
     }
 }
