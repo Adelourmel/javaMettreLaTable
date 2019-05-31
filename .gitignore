@@ -1,3 +1,4 @@
 ws/
 *.bin
 .idea/
+.README.md.swp
