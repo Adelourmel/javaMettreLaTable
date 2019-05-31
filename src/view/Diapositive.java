@@ -7,13 +7,14 @@ import javax.swing.*;
 import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Diapositive extends JPanel {
 
     public GUI gui;
 
     private int index;
-    private int maxIndex; //use for progress bar.
+    private int maxIndex; // used for progress bar.
     private String title;
     private String location;
     private String desc;
@@ -22,13 +23,18 @@ public class Diapositive extends JPanel {
     private JTextPane text;
     private boolean fin;
 
+    private ArrayList<String> t = new ArrayList<String>();
+    private ArrayList<Image> im = new ArrayList<Image>();
+
     public Diapositive() {
         super(new GridLayout(1, 2));
-        this.index = 1;
+        this.index = 0;
+
     }
 
     public Diapositive(GUI gui, String title, String location) {
         super(new GridLayout(1, 2));
+        initSlides();
         setBackground(Color.white);
         this.text = new JTextPane();
         Font font = new Font("Verdana", Font.BOLD, 20);
@@ -42,11 +48,23 @@ public class Diapositive extends JPanel {
         this.gui = gui;
         this.title = title;
         this.location = location;
-        this.index = 1;
+        this.index = 0;
         this.fin = false;
         getContent(this.index);
         getMaxIndex();
-        gui.getChrono().start();
+        gui.getChrono().start();   
+    }
+
+    public void initSlides() {
+        for (int i = 1; i < 34; i++) {
+            try {
+                String j = new JSONRead().readJSON(i)[1];
+                String im_s = new JSONRead().readJSON(i)[2];
+                Image img_new = (new ImageIcon(im_s)).getImage().getScaledInstance(350, 350,  java.awt.Image.SCALE_SMOOTH);
+                this.t.add(j);
+                this.im.add(img_new);
+            } catch (Exception e) {}
+        }        
     }
 
     public void getContent(int index) {
@@ -57,7 +75,7 @@ public class Diapositive extends JPanel {
 
     public void getText(int index) {
         try {
-            this.text.setText(new JSONRead().readJSON(this.index)[1]);
+            this.text.setText(this.t.get(index));
         } catch (Exception e) {
             gui.getChrono().stop();
             fin();
@@ -67,8 +85,7 @@ public class Diapositive extends JPanel {
 
     public void getImage(int index) {
         try {
-            Image img_new = (new ImageIcon(new JSONRead().readJSON(this.index)[2])).getImage().getScaledInstance(350, 350,  java.awt.Image.SCALE_SMOOTH);
-            this.image.setIcon(new ImageIcon(img_new));
+            this.image.setIcon(new ImageIcon(this.im.get(this.index)));
         } catch (Exception e) { }
     }
 
