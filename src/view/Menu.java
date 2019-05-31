@@ -31,7 +31,7 @@ public class Menu extends JPanel {
 
         String temps;
         if (chrono.getBestTime() == -1) {
-            temps = "0";
+            temps = "__:__";
         } else {
             temps = chrono.beautify(chrono.getBestTime());
         }
@@ -39,8 +39,8 @@ public class Menu extends JPanel {
         this.buttonMettreTable = createRow("Mettre la table", temps);
         this.buttonMettreTable.addActionListener(this.listener);
 
-        createRow("Preparer un repas complet", "- ").setEnabled(false);
-        createRow("Débarrasser la table", "- ").setEnabled(false);
+        createRow("Preparer un repas complet", "__:__").setEnabled(false);
+        createRow("Débarrasser la table", "__:__").setEnabled(false);
     }
 
     public JButton createRow(String title, String temps) {
@@ -67,6 +67,8 @@ public class Menu extends JPanel {
         tmp.add(button, BorderLayout.CENTER);
         tmp.add(text, BorderLayout.EAST);
 
+
+        tmp.setPreferredSize(new Dimension(50, 50));
         this.add(tmp);
 
         return button;

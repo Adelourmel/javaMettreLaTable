@@ -37,6 +37,9 @@ public class Chrono {
                 writeInFile();
 
         }
+        else if (score == -1) {
+          writeInFile();
+        }
 
         return score;
 
