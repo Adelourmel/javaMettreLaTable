@@ -57,12 +57,6 @@ public class Diapositive extends JPanel {
 
     public void getText(int index) {
         try {
-            // FileReader fr = new FileReader(this.location + "\\" + this.index + ".txt");
-            // Scanner scanner = new Scanner(fr);
-            // String textF = "";
-            // while (scanner.hasNextLine()) {
-                // textF = textF + scanner.nextLine() + "\n";
-            // }
             this.text.setText(new JSONRead().readJSON(this.index)[1]);
         } catch (Exception e) {
             gui.getChrono().stop();
@@ -72,10 +66,8 @@ public class Diapositive extends JPanel {
     }
 
     public void getImage(int index) {
-        // this.image.setIcon(new ImageIcon("..\\data\\" + this.location + "\\" + this.index + ".png"));
         try {
             Image img_new = (new ImageIcon(new JSONRead().readJSON(this.index)[2])).getImage().getScaledInstance(350, 350,  java.awt.Image.SCALE_SMOOTH);
-            // this.image.setIcon(new ImageIcon(new JSONRead().readJSON(this.index)[2]));
             this.image.setIcon(new ImageIcon(img_new));
         } catch (Exception e) { }
     }
