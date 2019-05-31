@@ -31,11 +31,11 @@ public class Chrono {
 
         int score = getBestTime();
 
-        if (score != -1) {
-            if (score > this.finalTime) {
+
+        if (score > this.finalTime) {
                 score = -1;
                 writeInFile();
-            }
+
         }
 
         return score;
@@ -51,11 +51,11 @@ public class Chrono {
             DataInputStream in = new DataInputStream(new FileInputStream(this.fileName));
 
             ret = in.readInt();
-
             in.close();
 
         } catch (IOException e) {
             System.out.println(e.getMessage()+" : chrone");
+            ret = -1;
         }
 
         return ret;
