@@ -75,9 +75,7 @@ public class Diapositive extends JPanel {
         // this.image.setIcon(new ImageIcon("..\\data\\" + this.location + "\\" + this.index + ".png"));
         try {
             this.image.setIcon(new ImageIcon(new JSONRead().readJSON(this.index)[2]));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        } catch (Exception e) { }
     }
 
     public void getNext() {
@@ -105,6 +103,7 @@ public class Diapositive extends JPanel {
         text += "Vous avez effectué la tache en "+temps+"\n";
         String record = gui.getChrono().beautify(gui.getChrono().getBestTime());
         text += "votre record précedent étant "+record+"\n";
+        System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
         this.image.setIcon(new ImageIcon("..\\data\\img\\coupe.png"));

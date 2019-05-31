@@ -67,9 +67,7 @@ public class Chrono {
         try {
             DataOutputStream out = new DataOutputStream(new FileOutputStream(this.fileName));
 
-
             out.writeInt(this.finalTime);
-
 
             out.close();
 
