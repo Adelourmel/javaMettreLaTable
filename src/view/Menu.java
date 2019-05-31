@@ -52,7 +52,7 @@ public class Menu extends JPanel {
 
         button.setBackground(new Color(139, 195, 74));
 
-        JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "mn</font></html>");
+        JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "</font></html>");
 
         text.setOpaque(true);
         text.setBackground(Color.WHITE);
