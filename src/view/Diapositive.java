@@ -110,9 +110,9 @@ public class Diapositive extends JPanel {
     public void fin() {
         String text = "Bravo ! \n";
         String temps = gui.getChrono().beautify(gui.getChrono().getFinalTime());
-        text += "Vous avez effectué la tache en "+temps+"\n";
+        text += "Vous avez effectué la tâche en "+temps+" !\n";
         String record = gui.getChrono().beautify(gui.getChrono().getBestTime());
-        text += "votre record précedent étant "+record+"\n";
+        text += "Votre record actuel est de "+record+"\n";
         System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
