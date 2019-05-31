@@ -117,6 +117,7 @@ public class GUI extends JFrame {
         this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
         this.progressBar = new JProgressBar();
+        this.progressBar.setForeground(new Color(255, 193, 7));
         this.header.add(this.exit, BorderLayout.WEST);
         this.header.add(this.title, BorderLayout.CENTER);
         this.header.add(this.progressBar,BorderLayout.SOUTH);
