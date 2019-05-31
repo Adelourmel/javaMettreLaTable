@@ -46,6 +46,7 @@ public class Diapositive extends JPanel {
         this.fin = false;
         getContent(this.index);
         getMaxIndex();
+        gui.getChrono().start();
     }
 
     public void getContent(int index) {
@@ -64,6 +65,7 @@ public class Diapositive extends JPanel {
             // }
             this.text.setText(new JSONRead().readJSON(this.index)[1]);
         } catch (Exception e) {
+            gui.getChrono().stop();
             fin();
             this.fin = true;
         }
@@ -98,7 +100,14 @@ public class Diapositive extends JPanel {
     }
 
     public void fin() {
-        this.text.setText("fin");
+        String text = "Bravo ! \n";
+        String temps = gui.getChrono().beautify(gui.getChrono().getFinalTime());
+        text += "Vous avez effectué la tache en "+temps+"\n";
+        String record = gui.getChrono().beautify(gui.getChrono().getBestTime());
+        text += "votre record précedent étant "+record+"\n";
+
+        this.text.setText(text);
+        this.image.setIcon(new ImageIcon("..\\data\\img\\coupe.png"));
     }
 
     public void getMaxIndex() {

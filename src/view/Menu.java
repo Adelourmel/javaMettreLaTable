@@ -12,70 +12,68 @@ import javax.swing.border.*;
 
 public class Menu extends JPanel {
 
-  public GUI gui;
+    public GUI gui;
 
-  private MenuListener listener;
-  private JButton buttonMettreTable;
+    private MenuListener listener;
+    private JButton buttonMettreTable;
 
-  public Menu(GUI gui) {
-    super();
+    public Menu(GUI gui) {
+        super();
 
-    this.listener = new MenuListener(this);
+        this.listener = new MenuListener(this);
 
-    this.setLayout(new GridLayout(3, 1));
-    createChoiceBox(gui.getChrono());
-    this.gui = gui;
-  }
-
-  public void createChoiceBox(Chrono chrono) {
-
-    String temps;
-    if (chrono.getBestTime() == -1) {
-      temps = "0";
-    }
-    else {
-      temps = chrono.beautify(chrono.getBestTime());
+        this.setLayout(new GridLayout(3, 1));
+        createChoiceBox(gui.getChrono());
+        this.gui = gui;
     }
 
-    this.buttonMettreTable = createRow("Mettre la table", temps);
-    this.buttonMettreTable.addActionListener(this.listener);
+    public void createChoiceBox(Chrono chrono) {
 
-    createRow("Preparer un repas complet", "0").setEnabled(false);
-    createRow("Débarrasser la table", "0").setEnabled(false);
-  }
+        String temps;
+        if (chrono.getBestTime() == -1) {
+            temps = "0";
+        } else {
+            temps = chrono.beautify(chrono.getBestTime());
+        }
 
-  public JButton createRow(String title, String temps) {
-    JPanel tmp = new JPanel();
-    tmp.setLayout(new BorderLayout());
+        this.buttonMettreTable = createRow("Mettre la table", temps);
+        this.buttonMettreTable.addActionListener(this.listener);
 
+        createRow("Preparer un repas complet", "- ").setEnabled(false);
+        createRow("Débarrasser la table", "- ").setEnabled(false);
+    }
 
-    JButton button = new JButton("<html><font size=15 color = white >" + title + "</font></html>");
-
-    button.setBackground(new Color(139,195,74));
-
-    JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "mn</font></html>");
-
-    text.setOpaque(true);
-    text.setBackground(Color.WHITE);
-
-
-    Border line = BorderFactory.createLineBorder(Color.DARK_GRAY);
-    Border empty = new EmptyBorder(20, 20, 20, 20);
-    CompoundBorder border = new CompoundBorder(line, empty);
-    text.setBorder(border);
+    public JButton createRow(String title, String temps) {
+        JPanel tmp = new JPanel();
+        tmp.setLayout(new BorderLayout());
 
 
+        JButton button = new JButton("<html><font size=15 color = white >" + title + "</font></html>");
 
-    tmp.add(button, BorderLayout.CENTER);
-    tmp.add(text, BorderLayout.EAST);
+        button.setBackground(new Color(139, 195, 74));
 
-    this.add(tmp);
+        JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "mn</font></html>");
 
-    return button;
+        text.setOpaque(true);
+        text.setBackground(Color.WHITE);
 
-  }
 
-  public JButton getbuttonMettreLaTable() {
-    return this.buttonMettreTable;
-  }
+        Border line = BorderFactory.createLineBorder(Color.DARK_GRAY);
+        Border empty = new EmptyBorder(20, 20, 20, 20);
+        CompoundBorder border = new CompoundBorder(line, empty);
+        text.setBorder(border);
+
+
+        tmp.add(button, BorderLayout.CENTER);
+        tmp.add(text, BorderLayout.EAST);
+
+        this.add(tmp);
+
+        return button;
+
+    }
+
+    public JButton getbuttonMettreLaTable() {
+        return this.buttonMettreTable;
+    }
 }

@@ -163,10 +163,5 @@
     "title": "Mettre la table - Partie 2",
     "desc": "Mettre la serviette sous la fourchette",
     "location": "../data/img/table_assiette4.png"
-  },
-  "34": {
-    "title": "Terminé !",
-    "desc": "Bon appétit !",
-    "location": "../data/img/bon_appetit.png"
   }
 }
