@@ -4,3 +4,4 @@ ws/
 .README.md.swp
 class/
 *.class
+out/
