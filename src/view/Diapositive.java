@@ -62,7 +62,7 @@ public class Diapositive extends JPanel {
                 Image img_new = (new ImageIcon(im_s)).getImage().getScaledInstance(350, 350,  java.awt.Image.SCALE_SMOOTH);
                 this.t.add(j);
                 this.im.add(img_new);
-            } catch (Exception e) {System.out.println(e);}
+            } catch (Exception e) {}
         }        
     }
 
@@ -116,7 +116,7 @@ public class Diapositive extends JPanel {
         System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
-        this.image.setIcon(new ImageIcon("data\\img\\coupe.png"));
+        this.image.setIcon(new ImageIcon(".\\data\\img\\coupe.png"));
     }
 
     public void getMaxIndex() {
