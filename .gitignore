@@ -1,1 +1,2 @@
-ws/..\data\score.bin
+ws/
+*.bin
