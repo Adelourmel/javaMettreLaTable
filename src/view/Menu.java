@@ -23,7 +23,7 @@ public class Menu extends JPanel {
         this.gui = gui;
     }
 
-    public void createChoiceBox(Chrono chrono) {
+    private void createChoiceBox(Chrono chrono) {
 
         String temps;
         if (chrono.getBestTime() == -1) {
@@ -39,7 +39,7 @@ public class Menu extends JPanel {
         createRow("Débarrasser la table", "__:__").setEnabled(false);
     }
 
-    public JButton createRow(String title, String temps) {
+    private JButton createRow(String title, String temps) {
         JPanel tmp = new JPanel();
         tmp.setLayout(new BorderLayout());
 

@@ -73,7 +73,7 @@ public class GUI extends JFrame {
      *
      * @param title Window title
      */
-    public void setHeader(String title) {
+    private void setHeader(String title) {
         this.setTitle(title);
         this.header = new JPanel();
         if (title.equals("Menu")) {
@@ -89,7 +89,7 @@ public class GUI extends JFrame {
         repaint();
     }
 
-    public void setFooter() {
+    private void setFooter() {
         this.footer = new JPanel(new GridLayout(1, 2));
         this.suivant = new JButton("<html><font size=15 color = white>Suivant</font></html>");
         this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
@@ -103,7 +103,7 @@ public class GUI extends JFrame {
         add(this.footer, BorderLayout.SOUTH);
     }
 
-    public void setHeader() {
+    private void setHeader() {
         this.header = new JPanel(new BorderLayout());
         this.header.setBackground(new Color(104, 159, 56));
         this.exit = new JButton();

@@ -50,7 +50,7 @@ public class Diapositive extends JPanel {
         gui.getChrono().start();   
     }
 
-    public void initSlides() {
+    private void initSlides() {
         for (int i = 1; i < 34; i++) {
             try {
                 String j = new JSONRead().readJSON(i)[1];
@@ -62,13 +62,13 @@ public class Diapositive extends JPanel {
         }        
     }
 
-    public void getContent(int index) {
+    private void getContent(int index) {
         getText(index);
         getImage(index);
         gui.getProgressBar().setValue(this.index);
     }
 
-    public void getText(int index) {
+    private void getText(int index) {
         try {
             this.text.setText(this.t.get(index));
         } catch (Exception e) {
@@ -78,7 +78,7 @@ public class Diapositive extends JPanel {
         }
     }
 
-    public void getImage(int index) {
+    private void getImage(int index) {
         try {
             this.image.setIcon(new ImageIcon(this.im.get(this.index)));
         } catch (Exception e) { }
@@ -103,7 +103,7 @@ public class Diapositive extends JPanel {
         this.fin = false;
     }
 
-    public void fin() {
+    private void fin() {
         String text = "Bravo ! \n";
         String temps = gui.getChrono().beautify(gui.getChrono().getFinalTime());
         text += "Vous avez effectué la tâche en "+temps+" !\n";
