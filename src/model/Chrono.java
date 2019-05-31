@@ -33,12 +33,11 @@ public class Chrono {
 
 
         if (score > this.finalTime) {
-                score = -1;
-                writeInFile();
+            score = -1;
+            writeInFile();
 
-        }
-        else if (score == -1) {
-          writeInFile();
+        } else if (score == -1) {
+            writeInFile();
         }
 
         return score;
@@ -57,7 +56,6 @@ public class Chrono {
             in.close();
 
         } catch (IOException e) {
-            System.out.println(e.getMessage()+" : chrone");
             ret = -1;
         }
 
@@ -81,7 +79,6 @@ public class Chrono {
 
 
     public String beautify(int time) {
-
         return new SimpleDateFormat("mm:ss").format(new Date(time));
     }
 

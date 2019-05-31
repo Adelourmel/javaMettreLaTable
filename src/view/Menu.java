@@ -13,14 +13,10 @@ import javax.swing.border.*;
 public class Menu extends JPanel {
 
     public GUI gui;
-
-    private MenuListener listener;
     private JButton buttonMettreTable;
 
     public Menu(GUI gui) {
         super();
-
-        this.listener = new MenuListener(this);
 
         this.setLayout(new GridLayout(3, 1));
         createChoiceBox(gui.getChrono());
@@ -37,7 +33,7 @@ public class Menu extends JPanel {
         }
 
         this.buttonMettreTable = createRow("Mettre la table", temps);
-        this.buttonMettreTable.addActionListener(this.listener);
+        this.buttonMettreTable.addActionListener(new MenuListener(this));
 
         createRow("Preparer un repas complet", "__:__").setEnabled(false);
         createRow("Débarrasser la table", "__:__").setEnabled(false);

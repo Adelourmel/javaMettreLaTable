@@ -2,7 +2,6 @@ package view;
 
 import control.DiapositiveListener;
 import control.GUIListener;
-import javafx.geometry.Orientation;
 import model.*;
 
 import javax.swing.*;
@@ -35,8 +34,8 @@ public class GUI extends JFrame {
         this.setFooter();
         // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(800,500));
-        setMinimumSize(new Dimension(800,500));
+        setPreferredSize(new Dimension(800, 500));
+        setMinimumSize(new Dimension(800, 500));
         pack();
         showMenu();
         setVisible(true);
@@ -59,9 +58,9 @@ public class GUI extends JFrame {
      * @param title
      * @param directory
      */
-    public void showDiapo(String title,String directory) {
+    public void showDiapo(String title, String directory) {
         setHeader(title);
-        this.diapo = new Diapositive(this,title,directory);
+        this.diapo = new Diapositive(this, title, directory);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
@@ -120,7 +119,7 @@ public class GUI extends JFrame {
         this.progressBar.setForeground(new Color(255, 193, 7));
         this.header.add(this.exit, BorderLayout.WEST);
         this.header.add(this.title, BorderLayout.CENTER);
-        this.header.add(this.progressBar,BorderLayout.SOUTH);
+        this.header.add(this.progressBar, BorderLayout.SOUTH);
         add(this.header, BorderLayout.NORTH);
         setHeader("Menu");
     }
@@ -130,11 +129,11 @@ public class GUI extends JFrame {
     }
 
     public Chrono getChrono() {
-      return this.chrono;
+        return this.chrono;
     }
 
     public Menu getMenu() {
-      return this.menu;
+        return this.menu;
     }
 
     public JButton getSuivant() {

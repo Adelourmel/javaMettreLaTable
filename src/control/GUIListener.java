@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUIListener implements ActionListener {
+
     private GUI gui;
 
     public GUIListener(GUI gui) {

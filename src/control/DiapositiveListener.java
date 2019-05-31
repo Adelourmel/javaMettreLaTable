@@ -7,8 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DiapositiveListener implements ActionListener {
+
     private GUI gui;
-    private Diapositive diapositive;
 
     public DiapositiveListener(GUI gui) {
         this.gui = gui;

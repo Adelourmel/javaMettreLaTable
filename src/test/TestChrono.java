@@ -6,7 +6,7 @@ public class TestChrono {
   public static void main(String[] args) {
 
     System.out.println("TESt chrono");
-    Chrono test = new Chrono("../data/score.bin");
+    Chrono test = new Chrono("data/score.bin");
     test.start();
     long i = 0;
 

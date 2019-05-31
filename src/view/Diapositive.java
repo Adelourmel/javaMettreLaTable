@@ -2,11 +2,8 @@ package view;
 
 import model.JSONRead;
 
-import java.util.Scanner;
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
-import java.io.FileReader;
 import java.util.ArrayList;
 
 public class Diapositive extends JPanel {
@@ -17,7 +14,6 @@ public class Diapositive extends JPanel {
     private int maxIndex; // used for progress bar.
     private String title;
     private String location;
-    private String desc;
 
     private JLabel image;
     private JTextPane text;
@@ -130,7 +126,7 @@ public class Diapositive extends JPanel {
         catch (Exception e){}
         finally {
             this.gui.getProgressBar().setMinimum(0);
-            this.gui.getProgressBar().setMaximum(this.maxIndex);
+            this.gui.getProgressBar().setMaximum(this.maxIndex-1);
         }
     }
 }
