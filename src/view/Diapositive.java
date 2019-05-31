@@ -74,7 +74,9 @@ public class Diapositive extends JPanel {
     public void getImage(int index) {
         // this.image.setIcon(new ImageIcon("..\\data\\" + this.location + "\\" + this.index + ".png"));
         try {
-            this.image.setIcon(new ImageIcon(new JSONRead().readJSON(this.index)[2]));
+            Image img_new = (new ImageIcon(new JSONRead().readJSON(this.index)[2])).getImage().getScaledInstance(350, 350,  java.awt.Image.SCALE_SMOOTH);
+            // this.image.setIcon(new ImageIcon(new JSONRead().readJSON(this.index)[2]));
+            this.image.setIcon(new ImageIcon(img_new));
         } catch (Exception e) { }
     }
 
