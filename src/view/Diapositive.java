@@ -4,6 +4,7 @@ import model.JSONRead;
 
 import java.util.Scanner;
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.io.FileReader;
 
@@ -18,8 +19,7 @@ public class Diapositive extends JPanel {
     private String desc;
 
     private JLabel image;
-    private JTextArea text;
-    // private JLabel text;
+    private JTextPane text;
     private boolean fin;
 
     public Diapositive() {
@@ -30,13 +30,11 @@ public class Diapositive extends JPanel {
     public Diapositive(GUI gui, String title, String location) {
         super(new GridLayout(1, 2));
         setBackground(Color.white);
-        this.text = new JTextArea();
+        this.text = new JTextPane();
         Font font = new Font("Verdana", Font.BOLD, 20);
         this.text.setFont(font);
-
-        // this.text = new JLabel();
-        this.text.setAlignmentX(CENTER_ALIGNMENT);
-        this.text.setMargin(new Insets(50,50,50,50));
+        this.text.setEditable(false);
+        this.text.setMargin(new Insets(100,50,50,50));
         this.image = new JLabel();
         this.image.setHorizontalAlignment(SwingConstants.CENTER);
         add(text);
