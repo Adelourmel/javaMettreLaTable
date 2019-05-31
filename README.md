@@ -9,6 +9,6 @@ git clone https://github.com/Adelourmel/javaMettreLaTable
 chmod +x run_linux.sh
 ./run_linux.sh
 ```
-:warning: Le fichier .jar doit **obligatoirement** se situer dans le même dossier que le dossier **data** !
+:warning: Le fichier .jar doit **obligatoirement** être situé dans le même dossier que le dossier **data** !
 
 Réalisé par [@ADelourmel](https://github.com/Adelourmel), [@kernoeb](https://github.com/kernoeb) et [@Cayril](https://github.com/Cayril)
