@@ -12,13 +12,11 @@ import javax.swing.border.*;
 
 public class Menu extends JPanel {
 
-<<<<<<< HEAD
+
     private GUI gui;
 
     private MenuListener listener;
-=======
-    public GUI gui;
->>>>>>> 64aa156b2552d589fca77f7d2f03d5950c3b1ee4
+
     private JButton buttonMettreTable;
 
     public Menu(GUI gui) {
