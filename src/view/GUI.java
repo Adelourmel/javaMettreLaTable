@@ -2,7 +2,6 @@ package view;
 
 import control.DiapositiveListener;
 import control.GUIListener;
-import javafx.geometry.Orientation;
 import model.*;
 
 import javax.swing.*;
@@ -28,15 +27,14 @@ public class GUI extends JFrame {
         super("Titre ?");
 
         this.diapo = new Diapositive();
-        this.chrono = new Chrono("..\\data\\score.bin");
-        this.menu = new Menu(this);
+        this.chrono = new Chrono("data\\score.bin");
 
         this.setHeader();
         this.setFooter();
         // GUI configuration.
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(800,500));
-        setMinimumSize(new Dimension(800,500));
+        setPreferredSize(new Dimension(800, 500));
+        setMinimumSize(new Dimension(800, 500));
         pack();
         showMenu();
         setVisible(true);
@@ -48,6 +46,7 @@ public class GUI extends JFrame {
     public void showMenu() {
         setHeader("Menu");
         remove(this.diapo);
+        this.menu = new Menu(this);
         add(this.menu);
         this.footer.setVisible(false);
         repaint();
@@ -59,9 +58,9 @@ public class GUI extends JFrame {
      * @param title
      * @param directory
      */
-    public void showDiapo(String title,String directory) {
+    public void showDiapo(String title, String directory) {
         setHeader(title);
-        this.diapo = new Diapositive(this,title,directory);
+        this.diapo = new Diapositive(this, title, directory);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
@@ -74,15 +73,15 @@ public class GUI extends JFrame {
      *
      * @param title Window title
      */
-    public void setHeader(String title) {
+    private void setHeader(String title) {
         this.setTitle(title);
         this.header = new JPanel();
         if (title.equals("Menu")) {
-            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\close.png");
+            ImageIcon icon = new ImageIcon("data\\buttonsIcons\\close.png");
             this.exit.setIcon(icon);
             this.progressBar.setVisible(false);
         } else {
-            ImageIcon icon = new ImageIcon("..\\data\\buttonsIcons\\return.png");
+            ImageIcon icon = new ImageIcon("data\\buttonsIcons\\return.png");
             this.exit.setIcon(icon);
             this.progressBar.setVisible(true);
         }
@@ -90,7 +89,7 @@ public class GUI extends JFrame {
         repaint();
     }
 
-    public void setFooter() {
+    private void setFooter() {
         this.footer = new JPanel(new GridLayout(1, 2));
         this.suivant = new JButton("<html><font size=15 color = white>Suivant</font></html>");
         this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
@@ -104,7 +103,7 @@ public class GUI extends JFrame {
         add(this.footer, BorderLayout.SOUTH);
     }
 
-    public void setHeader() {
+    private void setHeader() {
         this.header = new JPanel(new BorderLayout());
         this.header.setBackground(new Color(104, 159, 56));
         this.exit = new JButton();
@@ -120,7 +119,7 @@ public class GUI extends JFrame {
         this.progressBar.setForeground(new Color(255, 193, 7));
         this.header.add(this.exit, BorderLayout.WEST);
         this.header.add(this.title, BorderLayout.CENTER);
-        this.header.add(this.progressBar,BorderLayout.SOUTH);
+        this.header.add(this.progressBar, BorderLayout.SOUTH);
         add(this.header, BorderLayout.NORTH);
         setHeader("Menu");
     }
@@ -130,11 +129,11 @@ public class GUI extends JFrame {
     }
 
     public Chrono getChrono() {
-      return this.chrono;
+        return this.chrono;
     }
 
     public Menu getMenu() {
-      return this.menu;
+        return this.menu;
     }
 
     public JButton getSuivant() {

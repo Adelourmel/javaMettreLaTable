@@ -1,0 +1,7 @@
+ws/
+*.bin
+.idea/
+.README.md.swp
+class/
+*.class
+out/

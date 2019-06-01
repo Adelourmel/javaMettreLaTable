@@ -12,22 +12,24 @@ import javax.swing.border.*;
 
 public class Menu extends JPanel {
 
+<<<<<<< HEAD
     private GUI gui;
 
     private MenuListener listener;
+=======
+    public GUI gui;
+>>>>>>> 64aa156b2552d589fca77f7d2f03d5950c3b1ee4
     private JButton buttonMettreTable;
 
     public Menu(GUI gui) {
         super();
-
-        this.listener = new MenuListener(this);
 
         this.setLayout(new GridLayout(3, 1));
         createChoiceBox(gui.getChrono());
         this.gui = gui;
     }
 
-    public void createChoiceBox(Chrono chrono) {
+    private void createChoiceBox(Chrono chrono) {
 
         String temps;
         if (chrono.getBestTime() == -1) {
@@ -37,13 +39,13 @@ public class Menu extends JPanel {
         }
 
         this.buttonMettreTable = createRow("Mettre la table", temps);
-        this.buttonMettreTable.addActionListener(this.listener);
+        this.buttonMettreTable.addActionListener(new MenuListener(this));
 
         createRow("Preparer un repas complet", "__:__").setEnabled(false);
         createRow("Débarrasser la table", "__:__").setEnabled(false);
     }
 
-    public JButton createRow(String title, String temps) {
+    private JButton createRow(String title, String temps) {
         JPanel tmp = new JPanel();
         tmp.setLayout(new BorderLayout());
 

@@ -2,11 +2,8 @@ package view;
 
 import model.JSONRead;
 
-import java.util.Scanner;
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
-import java.io.FileReader;
 import java.util.ArrayList;
 
 public class Diapositive extends JPanel {
@@ -17,7 +14,6 @@ public class Diapositive extends JPanel {
     private int maxIndex; // used for progress bar.
     private String title;
     private String location;
-    private String desc;
 
     private JLabel image;
     private JTextPane text;
@@ -54,7 +50,7 @@ public class Diapositive extends JPanel {
         gui.getChrono().start();   
     }
 
-    public void initSlides() {
+    private void initSlides() {
         for (int i = 1; i < 34; i++) {
             try {
                 String j = new JSONRead().readJSON(i)[1];
@@ -66,13 +62,13 @@ public class Diapositive extends JPanel {
         }        
     }
 
-    public void getContent(int index) {
+    private void getContent(int index) {
         getText(index);
         getImage(index);
         gui.getProgressBar().setValue(this.index);
     }
 
-    public void getText(int index) {
+    private void getText(int index) {
         try {
             this.text.setText(this.t.get(index));
         } catch (Exception e) {
@@ -82,7 +78,7 @@ public class Diapositive extends JPanel {
         }
     }
 
-    public void getImage(int index) {
+    private void getImage(int index) {
         try {
             this.image.setIcon(new ImageIcon(this.im.get(this.index)));
         } catch (Exception e) { }
@@ -107,16 +103,18 @@ public class Diapositive extends JPanel {
         this.fin = false;
     }
 
-    public void fin() {
+    private void fin() {
         String text = "Bravo ! \n";
         String temps = gui.getChrono().beautify(gui.getChrono().getFinalTime());
-        text += "Vous avez effectué la tache en "+temps+"\n";
+        temps = temps.substring(0,temps.indexOf(":"))+" min "+temps.substring(temps.indexOf(":")+1)+" sec";
+        text += "Vous avez effectué la tâche en "+temps+" !\n";
         String record = gui.getChrono().beautify(gui.getChrono().getBestTime());
-        text += "votre record précedent étant "+record+"\n";
+        record = record.substring(0,record.indexOf(":"))+" min "+record.substring(record.indexOf(":")+1)+" sec";
+        text += "Votre record actuel est de "+record+"\n";
         System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
-        this.image.setIcon(new ImageIcon("..\\data\\img\\coupe.png"));
+        this.image.setIcon(new ImageIcon(".\\data\\img\\coupe.png"));
     }
 
     public void getMaxIndex() {
@@ -130,7 +128,7 @@ public class Diapositive extends JPanel {
         catch (Exception e){}
         finally {
             this.gui.getProgressBar().setMinimum(0);
-            this.gui.getProgressBar().setMaximum(this.maxIndex);
+            this.gui.getProgressBar().setMaximum(this.maxIndex-1);
         }
     }
 }
