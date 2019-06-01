@@ -12,7 +12,7 @@ import javax.swing.border.*;
 
 public class Menu extends JPanel {
 
-    public GUI gui;
+    private GUI gui;
 
     private MenuListener listener;
     private JButton buttonMettreTable;
@@ -77,5 +77,9 @@ public class Menu extends JPanel {
 
     public JButton getbuttonMettreLaTable() {
         return this.buttonMettreTable;
+    }
+
+    public GUI getGUI() {
+      return this.gui;
     }
 }

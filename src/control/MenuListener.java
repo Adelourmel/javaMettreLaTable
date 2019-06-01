@@ -14,7 +14,7 @@ public class MenuListener implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.menu.getbuttonMettreLaTable()) {
-            this.menu.gui.showDiapo("Mettre la table", "..\\data\\mettreTable");
+            this.menu.getGUI().showDiapo("Mettre la table", "..\\data\\mettreTable");
         }
     }
 }
