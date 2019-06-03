@@ -24,10 +24,10 @@ public class GUI extends JFrame {
 
     public GUI() {
         //GUI
-        super("Titre ?");
+        super("Mettre la table :D");
 
         this.diapo = new Diapositive();
-        this.chrono = new Chrono("data\\score.bin");
+        this.chrono = new Chrono("data/score.bin");
 
         this.setHeader();
         this.setFooter();
