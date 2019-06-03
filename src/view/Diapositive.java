@@ -111,7 +111,6 @@ public class Diapositive extends JPanel {
         String record = gui.getChrono().beautify(gui.getChrono().getBestTime());
         record = record.substring(0,record.indexOf(":"))+" min "+record.substring(record.indexOf(":")+1)+" sec";
         text += "Votre record actuel est de "+record+"\n";
-        System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
         this.image.setIcon(new ImageIcon("./data/img/coupe.png"));

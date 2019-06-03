@@ -22,7 +22,6 @@ public class Chrono {
 
     public int stop() {
         this.finalTime = (int) (System.currentTimeMillis() - this.timeInit);
-        System.out.println("Time : " + finalTime);
         return saveIfItBest();
     }
 
