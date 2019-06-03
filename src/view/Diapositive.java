@@ -114,7 +114,7 @@ public class Diapositive extends JPanel {
         System.out.println("finalTime : "+gui.getChrono().getFinalTime());
 
         this.text.setText(text);
-        this.image.setIcon(new ImageIcon(".\\data\\img\\coupe.png"));
+        this.image.setIcon(new ImageIcon("./data/img/coupe.png"));
     }
 
     public void getMaxIndex() {
