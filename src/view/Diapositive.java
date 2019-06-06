@@ -42,7 +42,6 @@ public class Diapositive extends JPanel {
      * @param  gui      GUI object
      * @param  title    Title of the slide
      * @param  location location of the slide
-     * @return          [description]
      */
     public Diapositive(GUI gui, String title) {
         super(new GridLayout(1, 2));
@@ -64,7 +63,7 @@ public class Diapositive extends JPanel {
         this.fin = false;
         getContent(this.index);
         getMaxIndex();
-        gui.getChrono().start();   
+        gui.getChrono().start();
     }
 
     /**
@@ -79,7 +78,7 @@ public class Diapositive extends JPanel {
                 this.t.add(j);
                 this.im.add(img_new);
             } catch (Exception e) {}
-        }        
+        }
     }
 
     /**
