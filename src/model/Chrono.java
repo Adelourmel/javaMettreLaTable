@@ -3,11 +3,13 @@ package model;
 import java.io.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+
 /**
- * This class allow to time and can save the time in file if the time is less than the last
- * @author Arnaud Delourmel
- * @author Noéwen Boisnard
- * @author Aymeric Bizouarn
+ * Chrono
+ * Time the user and save it in a file if there is a new record
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
  *
  */
 public class Chrono {
@@ -17,7 +19,7 @@ public class Chrono {
     private String fileName;
 
   /**
-   * Construcotr
+   * Constructor
    * @param fileName the name of the file
    */
     public Chrono(String fileName) {
@@ -34,8 +36,8 @@ public class Chrono {
     }
 
     /**
-     * This method stop the time and save the time if it's the best time
-     * @return if the time is the best return this time and -1 if it isn't the best time
+     * This method stop the timer and save it if it's the best time
+     * @return return time if it's best time, -1 if not
      */
     public int stop() {
         this.finalTime = (int) (System.currentTimeMillis() - this.timeInit);
@@ -45,7 +47,7 @@ public class Chrono {
 
     /**
      * This function allow to save the time if it's the best time
-     * @return if the time is the best return this time and -1 if it isn't the best time
+     * @return return time if it's best time, -1 if not
      */
     private int saveIfItBest() {
 
@@ -61,14 +63,12 @@ public class Chrono {
         }
 
         return score;
-
-
     }
 
 
 /**
- * Read the time store in the file
- * @return the best time
+ * Read the time and store it in the file
+ * @return best time
  */
     public int getBestTime() {
 
@@ -88,9 +88,9 @@ public class Chrono {
 
     }
 
-/**
- * Write in the file the new time. Create file if the file doesn't exist
- */
+    /**
+     * Write the new time in the file. Create file if the file doesn't exist.
+     */
     private void writeInFile() {
         try {
             DataOutputStream out = new DataOutputStream(new FileOutputStream(this.fileName));
@@ -105,8 +105,8 @@ public class Chrono {
     }
 
     /**
-     * Convert nanoseconde time to MM:SS
-     * @param  time nanoseconde time
+     * Convert nanosecond time to MM:SS
+     * @param  time nanosecond time
      * @return      String with mm:ss
      */
     public String beautify(int time) {
@@ -114,8 +114,8 @@ public class Chrono {
     }
 
 /**
- * Allow to have the time of the chrono
- * @return the time of the chrono
+ * Allow to have the time of the chronometer
+ * @return time of the chronometer
  */
     public int getFinalTime() {
         return this.finalTime;
