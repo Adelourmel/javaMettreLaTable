@@ -5,3 +5,4 @@ ws/
 class/
 *.class
 out/
+*.fuse_hidden*
