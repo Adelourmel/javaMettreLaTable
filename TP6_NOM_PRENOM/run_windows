@@ -1,0 +1,1 @@
+javac -cp "lib/*;class/" -d class/ .\src\model\*java;javac -cp "lib/*;class/" -d class/ .\src\control\*java .\src\view\*java;javac -cp "lib/*;class/" -d class/ .\src\*java;java -cp "lib/*;class/" Launcher
