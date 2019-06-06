@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Diapositive extends JPanel {
 
-    public GUI gui;
+    private GUI gui;
 
     private int index;
     private int maxIndex; // used for progress bar.
