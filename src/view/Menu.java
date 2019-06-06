@@ -10,6 +10,12 @@ import java.awt.Color;
 import java.awt.*;
 import javax.swing.border.*;
 
+/**
+ * Menu
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
+ */
 public class Menu extends JPanel {
     
     private GUI gui;
@@ -20,6 +26,10 @@ public class Menu extends JPanel {
 
     private final Color green_color = new Color(139, 195, 74); 
 
+    /**
+     * Java Constructor
+     * @param  gui the gui
+     */
     public Menu(GUI gui) {
         super();
 
@@ -28,6 +38,10 @@ public class Menu extends JPanel {
         this.gui = gui;
     }
 
+    /**
+     * Create the choice box
+     * @param chrono chronometer object
+     */
     private void createChoiceBox(Chrono chrono) {
 
         String temps;
@@ -44,6 +58,12 @@ public class Menu extends JPanel {
         createRow("Débarrasser la table", "__:__").setEnabled(false);
     }
 
+    /**
+     * Create a row
+     * @param  title the title
+     * @param  temps the time
+     * @return       JButton object
+     */
     private JButton createRow(String title, String temps) {
         JPanel tmp = new JPanel();
         tmp.setLayout(new BorderLayout());
@@ -73,13 +93,20 @@ public class Menu extends JPanel {
         this.add(tmp);
 
         return button;
-
     }
 
+    /**
+     * Get "buttonMettreLaTable"
+     * @return JButton
+     */
     public JButton getbuttonMettreLaTable() {
         return this.buttonMettreTable;
     }
 
+    /**
+     * Get the gui
+     * @return the gui
+     */
     public GUI getGUI() {
       return this.gui;
     }
