@@ -9,6 +9,10 @@ import java.awt.*;
 
 /**
  * This class make the graphical user interface.
+ *
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
  */
 public class GUI extends JFrame {
     /**
@@ -81,7 +85,7 @@ public class GUI extends JFrame {
     /**
      * Allow to show the diapo
      *
-     * @param title The diapo title.
+     * @param title     The diapo title.
      * @param directory The diapo file directory for content.
      */
     public void showDiapo(String title) {
@@ -96,6 +100,7 @@ public class GUI extends JFrame {
 
     /**
      * Initialize header with title
+     *
      * @param title Window title
      */
     private void setHeader(String title) {
@@ -157,6 +162,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the Header title.
+     *
      * @return The header title.
      */
     public String getTitle() {
@@ -165,6 +171,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the application chrono.
+     *
      * @return The application chrono.
      */
     public Chrono getChrono() {
@@ -173,6 +180,7 @@ public class GUI extends JFrame {
 
     /**
      * Return the menu panel.
+     *
      * @return The menu panel.
      */
     public Menu getMenu() {
@@ -181,6 +189,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the next button.
+     *
      * @return The next button.
      */
     public JButton getSuivant() {
@@ -189,6 +198,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the previous button.
+     *
      * @return The previous button.
      */
     public JButton getPrecedent() {
@@ -197,6 +207,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the diapositive panel.
+     *
      * @return The diapositive panel.
      */
     public Diapositive getDiapo() {
@@ -205,6 +216,7 @@ public class GUI extends JFrame {
 
     /**
      * Get the progress bar.
+     *
      * @return The progress bar.
      */
     public JProgressBar getProgressBar() {
