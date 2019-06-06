@@ -85,8 +85,7 @@ public class GUI extends JFrame {
     /**
      * Allow to show the diapo
      *
-     * @param title     The diapo title.
-     * @param directory The diapo file directory for content.
+     * @param title The diapo title.
      */
     public void showDiapo(String title) {
         setHeader(title);
