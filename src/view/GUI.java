@@ -7,23 +7,46 @@ import model.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class make the graphical user interface.
+ */
 public class GUI extends JFrame {
-
+    /**
+     * The Diapositive JPanel.
+     */
     private Diapositive diapo;
+    /**
+     * The menu JPanel.
+     */
     private Menu menu;
+    /**
+     * The Chrono og the application.
+     */
     private Chrono chrono;
 
+    /**
+     * The GUI header.
+     */
     private JPanel header;
+    /**
+     * The close and exit diapositive button.
+     */
     private JButton exit;
+    /**
+     * The Header title.
+     */
     private JLabel title;
+    /**
+     * The progression bar of the diapositive.
+     */
     private JProgressBar progressBar;
 
     private JPanel footer;
     private JButton suivant;
     private JButton precedent;
 
-    private final Color green_color = new Color(104, 159, 56); 
-    private final Color yellow_color = new Color(255, 193, 7); 
+    private final Color green_color = new Color(104, 159, 56);
+    private final Color yellow_color = new Color(255, 193, 7);
 
     public GUI() {
         //GUI
@@ -58,8 +81,8 @@ public class GUI extends JFrame {
     /**
      * Allow to show the diapo
      *
-     * @param title
-     * @param directory
+     * @param title The diapo title.
+     * @param directory The diapo file directory for content.
      */
     public void showDiapo(String title) {
         setHeader(title);
@@ -92,7 +115,7 @@ public class GUI extends JFrame {
     }
 
     /**
-     * Set the footer
+     * Make footer panel.
      */
     private void setFooter() {
         this.footer = new JPanel(new GridLayout(1, 2));
@@ -109,7 +132,7 @@ public class GUI extends JFrame {
     }
 
     /**
-     * Set the header
+     * Make the header panel.
      */
     private void setHeader() {
         this.header = new JPanel(new BorderLayout());
@@ -132,30 +155,58 @@ public class GUI extends JFrame {
         setHeader("Menu");
     }
 
+    /**
+     * Get the Header title.
+     * @return The header title.
+     */
     public String getTitle() {
         return title.getText();
     }
 
+    /**
+     * Get the application chrono.
+     * @return The application chrono.
+     */
     public Chrono getChrono() {
         return this.chrono;
     }
 
+    /**
+     * Return the menu panel.
+     * @return The menu panel.
+     */
     public Menu getMenu() {
         return this.menu;
     }
 
+    /**
+     * Get the next button.
+     * @return The next button.
+     */
     public JButton getSuivant() {
         return suivant;
     }
 
+    /**
+     * Get the previous button.
+     * @return The previous button.
+     */
     public JButton getPrecedent() {
         return precedent;
     }
 
+    /**
+     * Get the diapositive panel.
+     * @return The diapositive panel.
+     */
     public Diapositive getDiapo() {
         return diapo;
     }
 
+    /**
+     * Get the progress bar.
+     * @return The progress bar.
+     */
     public JProgressBar getProgressBar() {
         return progressBar;
     }
