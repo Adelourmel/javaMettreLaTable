@@ -22,6 +22,9 @@ public class GUI extends JFrame {
     private JButton suivant;
     private JButton precedent;
 
+    private final Color green_color = new Color(104, 159, 56); 
+    private final Color yellow_color = new Color(255, 193, 7); 
+
     public GUI() {
         //GUI
         super("Mettre la table :D");
@@ -93,8 +96,8 @@ public class GUI extends JFrame {
         this.footer = new JPanel(new GridLayout(1, 2));
         this.suivant = new JButton("<html><font size=15 color = white>Suivant</font></html>");
         this.precedent = new JButton("<html><font size=15 color = white >Précédent</font></html>");
-        this.suivant.setBackground(new Color(104, 159, 56));
-        this.precedent.setBackground(new Color(104, 159, 56));
+        this.suivant.setBackground(green_color);
+        this.precedent.setBackground(green_color);
         this.precedent.addActionListener(new DiapositiveListener(this));
         this.suivant.addActionListener(new DiapositiveListener(this));
 
@@ -105,7 +108,7 @@ public class GUI extends JFrame {
 
     private void setHeader() {
         this.header = new JPanel(new BorderLayout());
-        this.header.setBackground(new Color(104, 159, 56));
+        this.header.setBackground(green_color);
         this.exit = new JButton();
         this.exit.setPreferredSize(new Dimension(50, 50));
         this.exit.setBackground(null);
@@ -116,7 +119,7 @@ public class GUI extends JFrame {
         this.title.setHorizontalAlignment(SwingConstants.CENTER);
         this.exit.addActionListener(new GUIListener(this));
         this.progressBar = new JProgressBar();
-        this.progressBar.setForeground(new Color(255, 193, 7));
+        this.progressBar.setForeground(yellow_color);
         this.header.add(this.exit, BorderLayout.WEST);
         this.header.add(this.title, BorderLayout.CENTER);
         this.header.add(this.progressBar, BorderLayout.SOUTH);

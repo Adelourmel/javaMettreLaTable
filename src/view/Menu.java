@@ -11,13 +11,14 @@ import java.awt.*;
 import javax.swing.border.*;
 
 public class Menu extends JPanel {
-
-
+    
     private GUI gui;
 
     private MenuListener listener;
 
     private JButton buttonMettreTable;
+
+    private final Color green_color = new Color(139, 195, 74); 
 
     public Menu(GUI gui) {
         super();
@@ -50,7 +51,7 @@ public class Menu extends JPanel {
 
         JButton button = new JButton("<html><font size=15 color = white >" + title + "</font></html>");
 
-        button.setBackground(new Color(139, 195, 74));
+        button.setBackground(green_color);
 
         JLabel text = new JLabel("<html><font size=4 color = black>Meilleur temps : " + temps + "</font></html>");
 
