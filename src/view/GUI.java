@@ -61,9 +61,9 @@ public class GUI extends JFrame {
      * @param title
      * @param directory
      */
-    public void showDiapo(String title, String directory) {
+    public void showDiapo(String title) {
         setHeader(title);
-        this.diapo = new Diapositive(this, title, directory);
+        this.diapo = new Diapositive(this, title);
         add(this.diapo);
         remove(this.menu);
         this.footer.setVisible(true);
@@ -72,8 +72,7 @@ public class GUI extends JFrame {
     }
 
     /**
-     * Initialise header with Title
-     *
+     * Initialize header with title
      * @param title Window title
      */
     private void setHeader(String title) {
@@ -92,6 +91,9 @@ public class GUI extends JFrame {
         repaint();
     }
 
+    /**
+     * Set the footer
+     */
     private void setFooter() {
         this.footer = new JPanel(new GridLayout(1, 2));
         this.suivant = new JButton("<html><font size=15 color = white>Suivant</font></html>");
@@ -106,6 +108,9 @@ public class GUI extends JFrame {
         add(this.footer, BorderLayout.SOUTH);
     }
 
+    /**
+     * Set the header
+     */
     private void setHeader() {
         this.header = new JPanel(new BorderLayout());
         this.header.setBackground(green_color);

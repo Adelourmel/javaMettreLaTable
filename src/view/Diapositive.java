@@ -6,6 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Diapositive
+ * Initalize the slides and show them
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
+ */
 public class Diapositive extends JPanel {
 
     private GUI gui;
@@ -22,12 +29,22 @@ public class Diapositive extends JPanel {
     private ArrayList<String> t = new ArrayList<String>();
     private ArrayList<Image> im = new ArrayList<Image>();
 
+    /**
+     * Diapositive Constructor for the GridLayout
+     */
     public Diapositive() {
         super(new GridLayout(1, 2));
         this.index = 0;
     }
 
-    public Diapositive(GUI gui, String title, String location) {
+    /**
+     * Diapositive's Constructor
+     * @param  gui      GUI object
+     * @param  title    Title of the slide
+     * @param  location location of the slide
+     * @return          [description]
+     */
+    public Diapositive(GUI gui, String title) {
         super(new GridLayout(1, 2));
         initSlides();
         setBackground(Color.white);
@@ -50,6 +67,9 @@ public class Diapositive extends JPanel {
         gui.getChrono().start();   
     }
 
+    /**
+     * Initialize slides at the first launch
+     */
     private void initSlides() {
         for (int i = 1; i < 34; i++) {
             try {
@@ -62,12 +82,20 @@ public class Diapositive extends JPanel {
         }        
     }
 
+    /**
+     * Get the content of slide
+     * @param index Slide index
+     */
     private void getContent(int index) {
         getText(index);
         getImage(index);
         gui.getProgressBar().setValue(this.index);
     }
 
+    /**
+     * Get the text of the slide from the ArrayList
+     * @param index Slide index
+     */
     private void getText(int index) {
         try {
             this.text.setText(this.t.get(index));
@@ -78,12 +106,19 @@ public class Diapositive extends JPanel {
         }
     }
 
+    /**
+     * Get the picture of the slide from the ArrayList
+     * @param index Slide index
+     */
     private void getImage(int index) {
         try {
             this.image.setIcon(new ImageIcon(this.im.get(this.index)));
         } catch (Exception e) { }
     }
 
+    /**
+     * Get the next slide
+     */
     public void getNext() {
         if(this.fin){
             gui.showMenu();
@@ -94,6 +129,9 @@ public class Diapositive extends JPanel {
         }
     }
 
+    /**
+     * Get the previous slide
+     */
     public void getPrevious() {
         this.index--;
         getContent(this.index);
@@ -103,6 +141,9 @@ public class Diapositive extends JPanel {
         this.fin = false;
     }
 
+    /**
+     * Print the end slide and give the time and record
+     */
     private void fin() {
         String text = "Bravo ! \n";
         String temps = gui.getChrono().beautify(gui.getChrono().getFinalTime());
@@ -116,6 +157,9 @@ public class Diapositive extends JPanel {
         this.image.setIcon(new ImageIcon("./data/img/coupe.png"));
     }
 
+    /**
+     * Get the max index
+     */
     public void getMaxIndex() {
         this.maxIndex = 1;
         try {
