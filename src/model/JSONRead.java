@@ -5,6 +5,12 @@ import org.json.JSONObject;
 
 import java.io.File;
 
+/**
+ * JSONRead
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
+ */
 public class JSONRead {
 
     public static String[] readJSON(int index) throws Exception {

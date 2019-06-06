@@ -23,7 +23,7 @@ public class MenuListener implements ActionListener {
     }
 
     /**
-     * action listener
+     * Action listener
      * @param e the event
      */
     public void actionPerformed(ActionEvent e) {
