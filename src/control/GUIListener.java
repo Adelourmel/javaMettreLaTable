@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 
 /**
  * Listening Action in the GUI panel.
+ *
+ * @author BIZOUARN Aymeric
+ * @author BOISNARD Noéwen
+ * @author DELOURMEL Arnaud
  */
 public class GUIListener implements ActionListener {
     /**
@@ -16,6 +20,7 @@ public class GUIListener implements ActionListener {
 
     /**
      * Initialise the GUIListener.
+     *
      * @param gui The GUIListener.
      */
     public GUIListener(GUI gui) {
@@ -24,6 +29,7 @@ public class GUIListener implements ActionListener {
 
     /**
      * Click on object detection.
+     *
      * @param e The ActionEvent.
      */
     public void actionPerformed(ActionEvent e) {
