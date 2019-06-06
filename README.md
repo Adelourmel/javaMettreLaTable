@@ -6,14 +6,18 @@ Plus d'informations concernant le projet : _M2105-TP67-2019.pdf_
 
 
 
-Linux :
+**Linux :**
 
 ```bash
 git clone https://github.com/Adelourmel/javaMettreLaTable
 chmod +x run_linux.sh
 ./run_linux.sh
 ```
-Windows :
+**Windows (PowerShell) :**
+
+```
+git clone https://github.com/Adelourmel/javaMettreLaTable
+```
 
 ```bash
 javac -cp "lib/*;class/" -d class/ .\src\model\*java;javac -cp "lib/*;class/" -d class/ .\src\control\*java .\src\view\*java;javac -cp "lib/*;class/" -d class/ .\src\*java;java -cp "lib/*;class/" Launcher
