@@ -8,6 +8,10 @@ Plus d'informations concernant le projet : _M2105-TP67-2019.pdf_
 
 
 
+:warning: Afin d'utiliser **JSON**, nous avons utilisé deux librairies **JAR** situées dans le dossier **lib**.
+
+Il faut donc ajouter ces librairies dans le classpath à la compilation et l'exécution :
+
 **Linux :**
 
 ```bash
