@@ -4,7 +4,7 @@ Application réalisée en une semaine dans le cadre d'un projet universitaire.
 
 Plus d'informations concernant le projet : _M2105-TP67-2019.pdf_
 
-**Online javaDoc :** <https://adelourmel.github.io/javaMettreLaTable/>
+**Online javaDoc :** <https://adelourmel.github.io/javaMettreLaTable/>  
 
 
 
