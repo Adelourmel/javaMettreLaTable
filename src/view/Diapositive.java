@@ -20,7 +20,6 @@ public class Diapositive extends JPanel {
     private int index;
     private int maxIndex; // used for progress bar.
     private String title;
-    private String location;
 
     private JLabel image;
     private JTextPane text;
@@ -41,7 +40,6 @@ public class Diapositive extends JPanel {
      * Diapositive's Constructor
      * @param  gui      GUI object
      * @param  title    Title of the slide
-     * @param  location location of the slide
      */
     public Diapositive(GUI gui, String title) {
         super(new GridLayout(1, 2));
@@ -58,7 +56,6 @@ public class Diapositive extends JPanel {
         add(image);
         this.gui = gui;
         this.title = title;
-        this.location = location;
         this.index = 0;
         this.fin = false;
         getContent(this.index);
